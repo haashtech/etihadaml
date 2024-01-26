@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="myButton">Click me</button>
+    <ul >
+      <li id="myList" style="background-color: tomato;">List Item 1</li>
+      <li>List Item 2</li>
+      <li>List Item 3</li>
+    </ul>
+    
+    <script>
+      const button = document.getElementById('myButton');
+      const list = document.getElementById('myList');
+    
+      // Add click event listener to the list
+      list.addEventListener('click', function(event) {
+        // Hide the button when clicking on a list item
+        button.style.display = 'none';
+        // Stop the event from propagating to the document
+        event.stopPropagation();
+      });
+    
+      // Add click event listener to the document
+      document.addEventListener('click', function() {
+        // Show the button when clicking outside the list
+        button.style.display = 'block';
+      });
+    </script>
+
+</body>
+</html>
