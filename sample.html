@@ -1,36 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    .dropdown-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content input {
+      width: 100%;
+      padding: 8px;
+      margin: 2px 0;
+      display: block;
+      box-sizing: border-box;
+    }
+
+    .dropdown-icon {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+    }
+  </style>
+  <title>Custom Input Dropdown</title>
 </head>
 <body>
-    <button id="myButton">Click me</button>
-    <ul >
-      <li id="myList" style="background-color: tomato;">List Item 1</li>
-      <li>List Item 2</li>
-      <li>List Item 3</li>
-    </ul>
-    
-    <script>
-      const button = document.getElementById('myButton');
-      const list = document.getElementById('myList');
-    
-      // Add click event listener to the list
-      list.addEventListener('click', function(event) {
-        // Hide the button when clicking on a list item
-        button.style.display = 'none';
-        // Stop the event from propagating to the document
-        event.stopPropagation();
-      });
-    
-      // Add click event listener to the document
-      document.addEventListener('click', function() {
-        // Show the button when clicking outside the list
-        button.style.display = 'block';
-      });
-    </script>
+
+<div class="dropdown-container">
+  <input type="text" placeholder="Advanced Options" id="dropdownInput">
+  <i class="fas fa-caret-down dropdown-icon"></i>
+  <div class="dropdown-content" id="myDropdown">
+    <input type="text" placeholder="Option 1">
+    <input type="text" placeholder="Option 2">
+  </div>
+</div>
+
+<script>
+var dropdown = document.getElementById("myDropdown");
+var input = document.getElementById("dropdownInput");
+
+document.addEventListener("click", function(event) {
+  if (!event.target.closest('.dropdown-container')) {
+    dropdown.style.display = 'none';
+  }
+});
+
+input.addEventListener("click", function(event) {
+  event.stopPropagation();
+  dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+});
+</script>
 
 </body>
 </html>

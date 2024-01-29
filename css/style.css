@@ -11,23 +11,17 @@
     padding: 0;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+body, html {
+  margin: 0;
+  padding: 0;
 }
 .bg1{
     background-color: var(--black);
 }
 
-.logo_section2{
-    height: 100vh;
-}
-.bg2_1{
-    /* height: 10vh; */
-    height: fit-content;
-}.bg2_2{
-    /* height: 10vh; */
-    height: fit-content;
-}.bg2_3{
-    height: 80vh;
-}
+
 
 
 
@@ -264,3 +258,38 @@ footer {
 
 
 
+
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content input {
+  width: 100%;
+  padding: 8px;
+  margin: 2px 0;
+  display: block;
+  box-sizing: border-box;
+}
+
+.dropdown-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+
+
+#dropdownInput::placeholder {
+ font-weight: 600;
+}
