@@ -187,6 +187,7 @@ footer {
   outline: none;
   background-color: transparent;
 }
+
 #v-pills-wizard-tab.active {
   color: var(--black);
   border-radius: 0;
@@ -214,7 +215,7 @@ footer {
     color: #000000;
   }
   .btn_tab button:active{
-    color: #1D53B4;
+    color: #000919;
   }
   
   .ul_dropdown li:hover{
@@ -309,3 +310,27 @@ footer {
 .input-group-append {
   cursor: pointer;
 }
+.dob_span{
+  border: none;
+
+}
+.dob_input{
+  border: none;
+}
+
+.dob_input:focus{
+  border-color: var(--black);
+}
+
+
+.dob{
+  border: 1px solid var(--capsule);
+  border-radius: 10px;
+}
+
+.btn_back:hover{
+  background-color: #232323;
+}.btn_back{
+  background-color: var(--black);
+}
+

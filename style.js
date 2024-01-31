@@ -79,20 +79,41 @@ var tabs = $(".tab");
 var tabsPill = $(".tab-pills");
 
 loadFormData(current);
-
 function loadFormData(n) {
+  const nextButton = $("#next_button");
+
   $(tabsPill[n]).addClass("active").addClass("completed");
   $(tabs[n]).removeClass("d-none");
   $("#back_button").attr("disabled", n === 0 ? true : false);
 
-  if (n+1 === tabs.length) {
-    // Change color to green when the text is "SUBMIT"
-    $("#next_button").text("SEND REQUEST").css("background-color", "var(--submit)").removeAttr("onclick");
+  if (n + 1 === tabs.length) {
+    // Change color to green when the text is "SEND REQUEST"
+    nextButton.text("SEND REQUEST").css("background-color", "var(--submit)").removeAttr("onclick");
+
+    // Remove hover effect when it's the final step
+    nextButton.off('mouseenter mouseleave');
   } else {
     // Reset the color and text to their default values
-    $("#next_button").text("CONTINUE").css("background-color", "var(--orange)").attr("type", "button").attr("onclick", "next()");
+    nextButton.text("CONTINUE").css("background-color", "var(--orange)").attr("type", "button").attr("onclick", "next()");
+
+    // Add hover effect
+    nextButton.hover(
+      function () {
+        // Mouseenter (hover in) - Change background color on hover
+        $(this).css("background-color", "#ee4801");
+      },
+      function () {
+        // Mouseleave (hover out) - Change background color back to original
+        $(this).css("background-color", "var(--orange)");
+      }
+    );
   }
 }
+
+// Assuming you call the function at some point
+loadFormData(current);
+
+
 
 
 function next() {
@@ -357,12 +378,18 @@ input.addEventListener("click", function(event) {
   dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
 });
 
-
-
-$(document).ready(function(){
-  $('.datepicker').datepicker({
-    format: 'mm/dd/yyyy', // You can customize the date format
-    todayHighlight: true,
-    autoclose: true
+$(document).ready(function () {
+  $('#datepicker1').datepicker({
+    format: 'mm/dd',
+    viewMode: "days",
+    minViewMode: "days",
+    autoclose: true,
+  });
+});
+$(document).ready(function () {
+  $('#datepicker2').datepicker({
+      format: 'yyyy',
+      viewMode: "years",
+      minViewMode: "years"
   });
 });
