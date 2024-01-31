@@ -84,13 +84,16 @@ function loadFormData(n) {
   $(tabsPill[n]).addClass("active").addClass("completed");
   $(tabs[n]).removeClass("d-none");
   $("#back_button").attr("disabled", n === 0 ? true : false);
-  n === tabs.length 
-    ? $("#next_button").text("Submit").removeAttr("onclick")
-    : $("#next_button")
-        .attr("type", "button")
-        .text("Next")
-        .attr("onclick", "next()");
+
+  if (n+1 === tabs.length) {
+    // Change color to green when the text is "SUBMIT"
+    $("#next_button").text("SEND REQUEST").css("background-color", "var(--submit)").removeAttr("onclick");
+  } else {
+    // Reset the color and text to their default values
+    $("#next_button").text("CONTINUE").css("background-color", "var(--orange)").attr("type", "button").attr("onclick", "next()");
+  }
 }
+
 
 function next() {
   $(tabs[current]).addClass("d-none");
@@ -101,12 +104,25 @@ function next() {
 }
 
 function back() {
-  $(tabs[current]).addClass("d-none");
-  $(tabsPill[current]).removeClass("active");
+  if (current > 0) {
+    $(tabs[current]).addClass("d-none");
+    $(tabsPill[current]).removeClass("active");
 
-  current--;
-  loadFormData(current);
+    // Remove completed class from the current tab
+    $(tabsPill[current]).removeClass("completed");
+
+    current--;
+
+    // Add completed class to the previous tab
+    $(tabsPill[current]).addClass("completed");
+
+    loadFormData(current);
+  }
+
+  // Disable the back button if the current tab is 0
+  $("#back_button").attr("disabled", current === 0);
 }
+
 
 
 // end
@@ -321,9 +337,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Change color to orange
-  document.styleSheets[0].insertRule('.rangeslider .rangeslider__handle { background: #FFA500; border: 2px solid #FFA500; }', 0);
-  document.styleSheets[0].insertRule('.rangeslider .rangeslider__fill { background: #FFA500; }', 0);
+ 
 });
 
 
@@ -341,4 +355,14 @@ document.addEventListener("click", function(event) {
 input.addEventListener("click", function(event) {
   event.stopPropagation();
   dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+});
+
+
+
+$(document).ready(function(){
+  $('.datepicker').datepicker({
+    format: 'mm/dd/yyyy', // You can customize the date format
+    todayHighlight: true,
+    autoclose: true
+  });
 });

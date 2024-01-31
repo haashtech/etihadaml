@@ -6,6 +6,8 @@
     --gray:#efefef;
     --text:#686868;
     --capsule:#dcdcdc;
+    --submit:#4CAF50;
+    --navlink:#9D9D9D;
   }
 *{
     padding: 0;
@@ -186,7 +188,7 @@ footer {
   background-color: transparent;
 }
 #v-pills-wizard-tab.active {
-  color: var(--orange);
+  color: var(--black);
   border-radius: 0;
   box-sizing: border-box;
   border: none;
@@ -194,6 +196,8 @@ footer {
   outline: none;
   background-color: transparent;
 }
+
+
 #home-tab:focus, #home-tab:active {
     outline: none !important;
     box-shadow: none !important;
@@ -237,9 +241,9 @@ footer {
 
 
 
-.nav-link.active {
-  background-color: var(--orange);
-  color: var(--blue);
+.nav-link{
+ 
+  color: var(--navlink);
 }
 
 
@@ -252,7 +256,7 @@ footer {
 
 
 .tab-pills.completed {
-  color: var(--orange); 
+  color: var(--black); 
 }
 
 
@@ -292,4 +296,16 @@ footer {
 
 #dropdownInput::placeholder {
  font-weight: 600;
+}
+
+
+.completed {
+  color: green; /* Change the color to your desired color */
+}
+
+.form-group.row label{
+  width: 20vw;
+}
+.input-group-append {
+  cursor: pointer;
 }
