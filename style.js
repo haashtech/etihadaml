@@ -79,6 +79,7 @@ var tabs = $(".tab");
 var tabsPill = $(".tab-pills");
 
 loadFormData(current);
+
 function loadFormData(n) {
   const nextButton = $("#next_button");
 
@@ -87,34 +88,32 @@ function loadFormData(n) {
   $("#back_button").attr("disabled", n === 0 ? true : false);
 
   if (n + 1 === tabs.length) {
-    // Change color to green when the text is "SEND REQUEST"
+    // Change text to "SEND REQUEST" without changing the background color
     nextButton.text("SEND REQUEST").css("background-color", "var(--submit)").removeAttr("onclick");
-
     // Remove hover effect when it's the final step
-    nextButton.off('mouseenter mouseleave');
+    nextButton.off('mouseenter mouseleave').css("background-color", "var(--submit)");
   } else {
-    // Reset the color and text to their default values
+    // Reset the text to "CONTINUE" and keep the background color
     nextButton.text("CONTINUE").css("background-color", "var(--orange)").attr("type", "button").attr("onclick", "next()");
 
     // Add hover effect
-    nextButton.hover(
-      function () {
-        // Mouseenter (hover in) - Change background color on hover
-        $(this).css("background-color", "#ee4801");
-      },
-      function () {
-        // Mouseleave (hover out) - Change background color back to original
-        $(this).css("background-color", "var(--orange)");
-      }
-    );
+    if(nextButton.text=="CONTINUE"){
+      nextButton.hover(
+        function () {
+          // Mouseenter (hover in) - Change background color on hover
+          $(this).css("background-color", "#ee4801");
+        },
+        function () {
+          // Mouseleave (hover out) - Change background color back to original
+          $(this).css("background-color", "var(--orange)");
+        }
+      );
+    }
   }
 }
 
 // Assuming you call the function at some point
 loadFormData(current);
-
-
-
 
 function next() {
   $(tabs[current]).addClass("d-none");
@@ -143,7 +142,6 @@ function back() {
   // Disable the back button if the current tab is 0
   $("#back_button").attr("disabled", current === 0);
 }
-
 
 
 // end
