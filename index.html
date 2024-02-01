@@ -192,12 +192,12 @@
            
 
             <!-- content_section_tab -->
-            <div class="bg2_3 ps-0"  style="display: flex;align-items: center;justify-content: center;">
+            <div class="bg2_3 ps-0 "  style="display: flex;align-items: start;justify-content: center;width: fit-content;">
               <div class="tab-content" id="v-pills-tabContent">
-                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                <div class="tab-pane fade show active mt-5" id="v-pills-home" role="tabpanel"
                   aria-labelledby="v-pills-home-tab" tabindex="0">
                   <!-- <h1>Welcome <span style="color: var(--orange);"><b>“ABIN”</b></span></h1> -->
-                  <div class="row">
+                  <div class="row pt-5">
                     <div class="col-sm-6 p-5 pb-0 pt-0" style="
                           display: flex;
                           flex-direction: column;
@@ -365,10 +365,10 @@
                     </div>
                   </div>
                 </div>
-                <div class="tab-pane fade vw-100" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab"
+                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab"
                   tabindex="0">
-                  <div class="row px-5" >
-                    <form>
+                  <div class="row px-5 " >
+                    <form >
                       <div class="form-group row">
                         <label for="firstName" class="col-sm-2 col-form-label">Customer Name</label>
                         <div class="col">
@@ -424,32 +424,13 @@
                         </div>
                       </div>
                     </form>
-                    <!-- <div class="col d-flex">
-                      <p class="pt-5" style="line-height: 50px; width: 30%">
-                        Customer Name <br />
-                        eMAIL <br />
-                        Contact Number <br />
-                        Trade Name <br />
-                        Trade License Number <br />
-                        Trade License Expiry <br />
-                        Address <br />
-                        TRN <br />
-                        User ID
-                      </p>
-                      <p class="pt-5" style="line-height: 50px; font-weight: 600;width: 100%;">
-                        : Abin s chandran <br />: abc@gmsil.com <br/>
-                        : +7923 234 343 <br />
-                        : 12345 <br />: 000000 <br />: 00 / 00 / 0000 <br />:
-                        abc <br />: 00000 <br />: abinschandran
-                      </p>
-                    </div> -->
                   </div>
                 </div>
                 <div  class="tab-pane fade myList px-5" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab"
                   tabindex="0">
-                  <section style="width:75vw;">
-                    <div class="container p-0" style="height: 100%;">
-                      <form class="card"  >
+                  <section >
+                    <div class="container p-0">
+                      <form class="card" style="width: auto;" >
                         <div class="card-header" style="background-color: var(--capsule);">
                           <nav class="nav nav-pills nav-fill">
                             <a id="v-pills-wizard-tab" class="nav-link tab-pills" href="#"><span
@@ -525,21 +506,11 @@
                                 The person's full name in non-Latin script, or if separating based on First/Middle/Last name is not possible
                               </p>
                             </div>
-                            <!-- <div class="row">
-                              <div class="mb-3 col-md-6">
-                                <label for="city" class="form-label">City</label>
-                                <input type="text" class="form-control p-3 rounded-20" name="city" id="city"
-                                  placeholder="Please enter city" />
-                              </div>
-                              <div class="mb-3 col-md-6">
-                                <label for="state" class="form-label">State</label>
-                                <input type="state" class="form-control p-3 rounded-20" name="state" id="state"
-                                  placeholder="Please enter state" />
-                              </div>
-                            </div> -->
                           </div>
 
+                         <!-- --------corporate_start------ -->
                        
+                      
 
                           <div class="tab d-none">
                              <div class="row pt-3">
@@ -560,6 +531,7 @@
                                     </div>
                                 </form>
                               </div>
+                              
                               <div class="mb-3 col-md-6">
                                 <form class="row">
                                   <div class="col">
@@ -601,7 +573,7 @@
                           
                             <div class="py-3">
                               <span style="font-weight: 600;">Match rate :</span><output>80</output>
-                            <input style="width: 100%;" type="range" min="10" max="100" value="80" name="progress_value[]" data-rangeSlider>
+                            <input style="width: 100%;" type="range" min="0" max="100" value="80" name="progress_value[]" data-rangeSlider>
                             <p style="font-size: 14px;font-weight: 300px;">
                               Indicates how closely the name being checked matches the name on the matching watchlist profile, with 1 being not close and 100 being very close
                             </p>
@@ -734,6 +706,21 @@
                             </div>
                           </div>
                         </div>
+
+
+
+
+
+<!-- ------------------------------corporate_cardbody -->
+
+
+<!-- end -->
+
+
+
+
+
+
                         <div class="d-flex justify-content-between card-footer text-end " style="border: none;background-color: var(--gray);">
                           <button style="text-decoration: none;font-size: 14px;" type="button" id="back_button" class="btn btn-link" >
                             Cancel
@@ -753,9 +740,9 @@
 
 
                 </div>
-                <div class="tab-pane fade" id="v-pills-notifications" role="tabpanel" aria-labelledby="v-pills-settings-tab"
+                <div class="tab-pane fade mt-5" id="v-pills-notifications" role="tabpanel" aria-labelledby="v-pills-settings-tab"
                   tabindex="0">
-                  <div class="col-sm-12 p-5 pb-0 pt-0">
+                  <div class="col-sm-12 p-5 pb-0 pt-5">
                     <div style="
                           background-color: var(--gray);
                           border-radius: 20px;

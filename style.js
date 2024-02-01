@@ -307,11 +307,14 @@ function back() {
 
 // ranger start
 
+
+
 document.addEventListener('DOMContentLoaded', function() {
   var documentElement = document;
   var selector = '[data-rangeslider]';
   var element = document.querySelector(selector);
   var textContent = ('textContent' in document) ? 'textContent' : 'innerText';
+ 
 
   function valueOutput(element) {
     var value = element.value;
@@ -359,6 +362,17 @@ document.addEventListener('DOMContentLoaded', function() {
  
 });
 
+
+
+// const range = document.querySelector('#range');
+// range.addEventListener('input', function () {
+//     const bg = getComputedStyle(this).getPropertyValue('--white');
+//     const slider = getComputedStyle(this).getPropertyValue('--slider');
+//     range.setAttribute(
+//         'style',
+//         `background:linear-gradient(to right,${slider},${slider} ${this.value}%,${bg} ${this.value}%) `
+//     )
+// })
 
 
 

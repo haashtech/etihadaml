@@ -334,3 +334,17 @@ footer {
   background-color: var(--black);
 }
 
+/* #range {
+ 
+  --slider: rgb(255, 77, 0);
+  background: var(--white);
+  -webkit-appearance: none;
+} */
+
+#range {
+  --slider: rgb(255, 77, 0);
+  background: linear-gradient(to right, var(--slider), var(--slider) 80%, var(--white) 80%);
+  -webkit-appearance: none;
+  width: 100%;
+  border-radius: 50px;
+}
