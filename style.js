@@ -510,3 +510,23 @@ function filterTable() {
       }
   }
 }
+
+
+
+
+
+
+// collapse start 
+
+
+
+var collapseElementList = [].slice.call(document.querySelectorAll('.collapse'))
+var collapseList = collapseElementList.map(function (collapseEl) {
+    collapseEl.addEventListener('hidden.bs.collapse', function () {
+        let children = this.querySelectorAll('.collapse.show');
+        children.forEach((c)=>{
+            var collapse = bootstrap.Collapse.getInstance(c)
+            collapse.hide()
+        })
+    })
+})

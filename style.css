@@ -513,105 +513,15 @@ tr{
 
 
 
-:root {
-  --neutral-clr: #5f9ea0;
+
+/* nested */
 
 
 
-ul {
-  list-style: none;
-}
 
-.accordion {
-  /* max-width: 30ch; */
-  width: 100%;
-}
 
-.accordion-item {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  & > :first-child {
-    margin-right: 1rem;
-  }
-  & svg {
-    transition: rotate 300ms ease;
-    width: 1rem;
-  }
 
-  &:last-child .accordion-collapsable {
-    border: none;
-  }
-}
 
-.accordion-trigger {
-  font-size: 1rem;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: space-between;
-  padding: 1rem 0;
-  cursor: pointer;
-  transition: padding 0.5s ease;
-
-  &:hover {
-    padding-left: 0.5rem;
-  }
-}
-
-.accordion-item:focus-within .accordion-trigger {
-  text-decoration: underline;
-}
-
-.accordion-collapsable {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: all 300ms ease;
-  border-bottom: 1px solid #666;
-  color: #464646;
-  font-size: 1rem;
-}
-
-.accordion-content {
-  overflow: hidden;
-  padding: 0;
-}
-
-.accordion-content :last-child {
-  margin-bottom: 1rem;
-}
-.accordion-action {
-  width: 0;
-  height: 0;
-  opacity: 0;
-}
-.accordion-action:checked ~ .accordion-collapsable {
-  grid-template-rows: 1fr;
-}
-
-.accordion-item:has(.accordion-action:checked) svg {
-  rotate: -180deg;
-}
-
-.accordion-reset {
-  opacity: 0;
-  display: none;
-  pointer-events: none;
-  cursor: pointer;
-  position: absolute;
-  inset: 0;
-  /*  firefox fix from @_Admin on youtube. */
-  width: 100%;
-}
-
-.accordion-action:checked ~ .accordion-reset {
-  display: block;
-  position: absolute;
-  inset: 0;
-  pointer-events: auto;
-}
-}
 
 
 
