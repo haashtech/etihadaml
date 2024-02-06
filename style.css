@@ -19,6 +19,10 @@ body, html {
   margin: 0;
   padding: 0;
 }
+
+html {
+padding: 0;
+}
 .bg1{
     background-color: var(--black);
 }
@@ -143,6 +147,7 @@ footer {
 
 
 
+
 /* Style the scrollbar track */
 ::-webkit-scrollbar {
     width: 7px; /* Set the width of the scrollbar */
@@ -167,6 +172,27 @@ footer {
   }
 
 
+  .dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+}
+.dropdown-toggle1::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+}
+
 #home-tab.active {
     color: var(--orange);
     border-radius: 0;
@@ -185,7 +211,14 @@ footer {
   /* border-bottom: 3px solid var(--orange); */
   box-shadow: none;
   outline: none;
-  background-color: transparent;
+  /* background-color: transparent; */
+  background-color: rgb(72, 72, 72);
+
+}
+
+.pep:hover{
+  background-color: rgb(72, 72, 72);
+
 }
 
 #v-pills-wizard-tab.active {
@@ -232,7 +265,7 @@ footer {
 }
 .btn_sidebar button:hover{
   color: var(--white);
-  /* background-color: #4e1616; */
+  background-color: rgb(72, 72, 72);
 
 }
 .btn_sidebar button li a{
@@ -347,4 +380,249 @@ footer {
   -webkit-appearance: none;
   width: 100%;
   border-radius: 50px;
+}
+
+/* Styles for wrapping the search box */
+
+.main {
+  width: 50%;
+  margin: 50px auto;
+}
+
+/* Bootstrap 5 text input with search icon */
+
+.has-search .form-control {
+  padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  padding-left:1.5rem ;
+  line-height: 3.675rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}
+.has-search .form-control-feedback1{
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 3.375rem;
+  padding-left:1.5rem ;
+  line-height: 3.675rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}
+
+
+
+/* #myButton {
+  position:static  !important;
+  right: 50px !important;
+  top: 100px !important;
+  /* Other styles */
+/* } */ 
+
+/* Add drop shadow to an element with class "example" */
+.has-search input{
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1); /* horizontal offset, vertical offset, blur radius, color */
+}
+
+
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.search-filter-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+
+.search-box {
+  position: relative;
+  padding: 0px;
+  width: 100%;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 8px;
+  color: #aaa;
+}
+
+.filter-button {
+  padding: 8px;
+  background-color:var(--text);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+table, th, td {
+  border: none;
+}
+table{
+  border-spacing: 0 10px; /* Adjust the second value to set the desired space between rows */
+   margin-bottom: 20px;
+   border-collapse: separate;
+}
+tr{
+  border-radius: 10px;
+}
+.table-row td{
+  background-color: var(--gray);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.table-head th{
+  background-color: transparent;
+}
+.review{
+  background-color: gold;
+  border-radius: 50px;
+  font-size: 14px;
+}
+.review_c{
+  background-color: rgb(43, 214, 0);
+  border-radius: 50px;
+  font-size: 14px;
+
+}
+
+
+
+
+
+
+:root {
+  --neutral-clr: #5f9ea0;
+
+
+
+ul {
+  list-style: none;
+}
+
+.accordion {
+  /* max-width: 30ch; */
+  width: 100%;
+}
+
+.accordion-item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  & > :first-child {
+    margin-right: 1rem;
+  }
+  & svg {
+    transition: rotate 300ms ease;
+    width: 1rem;
+  }
+
+  &:last-child .accordion-collapsable {
+    border: none;
+  }
+}
+
+.accordion-trigger {
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding: 1rem 0;
+  cursor: pointer;
+  transition: padding 0.5s ease;
+
+  &:hover {
+    padding-left: 0.5rem;
+  }
+}
+
+.accordion-item:focus-within .accordion-trigger {
+  text-decoration: underline;
+}
+
+.accordion-collapsable {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: all 300ms ease;
+  border-bottom: 1px solid #666;
+  color: #464646;
+  font-size: 1rem;
+}
+
+.accordion-content {
+  overflow: hidden;
+  padding: 0;
+}
+
+.accordion-content :last-child {
+  margin-bottom: 1rem;
+}
+.accordion-action {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+.accordion-action:checked ~ .accordion-collapsable {
+  grid-template-rows: 1fr;
+}
+
+.accordion-item:has(.accordion-action:checked) svg {
+  rotate: -180deg;
+}
+
+.accordion-reset {
+  opacity: 0;
+  display: none;
+  pointer-events: none;
+  cursor: pointer;
+  position: absolute;
+  inset: 0;
+  /*  firefox fix from @_Admin on youtube. */
+  width: 100%;
+}
+
+.accordion-action:checked ~ .accordion-reset {
+  display: block;
+  position: absolute;
+  inset: 0;
+  pointer-events: auto;
+}
+}
+
+
+
+
+.TopBtnresultPage div{
+  justify-content: end;
+}
+
+
+.TopBtnresultPage button{
+  padding: 10px 20px;
+  background-color: var(--black);
+  color: var(--white);
 }

@@ -17,38 +17,58 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.18.0/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" /> -->
     
 
 </head>
 
 <body>
-  <div class="main_container "  style="overflow: hidden;"  >
-    <div class="continer ">
-      <div class="row vh-100">
+  <div class="main_container "    >
+    <div class="container-fluid">
+      <div class="row vh-100 " style="position: relative;">
         <!-- sidebar_start -->
-        <div class="col-sm-2 bg1 d-none d-lg-block">
+        <div class="col-sm-2 bg1 d-none d-sm-block p-0">
           <div class="row m-0">
-            <div class="py-5 d-flex justify-content-center align-items-start logo_section1">
+            <div class="py-5 m-0 d-flex justify-content-center align-items-start logo_section1">
               <img style="height: 80px" src="/images/Layer_1.svg" alt="" />
             </div>
-            <div class="logo_section2 pe-0">
-              <div class="row">
-                <div class="col p-0">
+            <div class="logo_section2 pe-0 container-fluid p-0">
+              <div class="row m-0">
+                <div class="p-0 m-0">
                   <div class="text-white py-4">
-                    <div class="d-flex align-items-start justify-content-center p-0 m-0">
-                      <div class="nav flex-column nav-pills btn_sidebar " id="v-pills-tab"
+                    <div style="width: 100%;" class="d-flex align-items-start">
+                      <div style="width: 100%;" class="nav flex-column nav-pills btn_sidebar" id="v-pills-tab"
                         role="tablist" aria-orientation="vertical">
+
+
+                        <!-- <button  id="myButton" data-bs-toggle="pill" data-bs-target="#v-pills-messages" style="
+                        background-color: var(--orange);
+                        border: none;
+                        padding: 15px 40px;
+                        border-radius: 5px;
+                        font-weight: 600;
+                        color: var(--white);
+                        width: fit-content;
+                        ">
+                        <img class="pe-2" src="/images/icons/plus_icon.svg" alt="" />
+                        NEW CHECK
+                        </button> -->
+
+                    
+
+
                         <hr class="m-0">
-                        <button  class="nav-link active align-items-center d-flex py-4 pe-0"
+                        <button  class="nav-link active align-items-center d-flex py-4 pe-0 m-0"
                           id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button"
                           role="tab" aria-controls="v-pills-home" aria-selected="true">
-                          <div id="btn_dashboard_tab" class="ps-4" style="
+                          <div id="btn_dashboard_tab" class=" " style="
                                 display: flex;
                                 align-items: center;
-                                justify-content: center;
+                                /* justify-content: center; */
                               ">
-                            <iconify-icon class="pe-2" icon="radix-icons:dashboard"></iconify-icon>
+                            <iconify-icon class="pe-3" icon="radix-icons:dashboard"></iconify-icon>
                             Dashboard
                           </div>
                         </button>
@@ -65,30 +85,31 @@
                         <button class="nav-link align-items-center d-flex py-4 pe-0" id="v-pills-home-tab" data-bs-toggle="pill"
                           data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
                           aria-selected="false">
-                          <div id="btn_profile_tab" class="ps-4">
-                            <iconify-icon class="pe-2" icon="healthicons:ui-user-profile"></iconify-icon>
+                          <div id="btn_profile_tab" >
+                            <iconify-icon class="pe-3" icon="healthicons:ui-user-profile"></iconify-icon>
                             Profile
                           </div>
                         </button>
                         <hr class="m-0">
-                        <button id="v-pills-home-tab" style="background-color: transparent;" class="nav-link align-items-center d-flex py-4 pe-0">
-                          <ul class="nav navbar-nav nav-link">
-                            <li class="dropdown ps-4 pe-4">
-                              <a  style="
+                        <button id="v-pills-home-tab" class="nav-link align-items-center d-flex py-0 pe-0 ps-0">
+                          <ul class="nav navbar-nav nav-link p-0" style="width: 100%;">
+                            <li class="dropdown">
+                              <a style="
                                     text-decoration: none;
                                     display: flex;
                                     /* align-items: center; */
                                     text-align: left;
                                     width: 100%;
                                   " href="#" class="dropdown-toggle" data-toggle="dropdown">
-                               <div class="d-flex pe-1">
-                                <iconify-icon class="pe-2" icon="iconamoon:file-check-light"></iconify-icon>
+                               <div class="d-flex py-3 ps-3 container-fluid">
+                                <iconify-icon class="pe-3" icon="iconamoon:file-check-light"></iconify-icon>
                                 <p class="m-0">
                                   PEP, Sanction & <br> Adverse Media Check
                                 </p>
                                </div>
                                <!-- <iconify-icon icon="gridicons:dropdown"></iconify-icon> -->
-                              </b></a>
+                              </b>
+                              </a>
                               <ul style="
                                     line-height: 40px;
                                     background-color: rgb(43, 43, 43);
@@ -99,14 +120,14 @@
                                     class="d-flex align-items-center ps-4" style="
                                         text-decoration: none;
                                         font-weight: 500;
-                                        font-size: 15px;
+                                        font-size: 15px;  
                                       " href="#">
                                     <iconify-icon class="pe-2" icon="ic:round-plus"></iconify-icon>New Check
                                   </div>
                                 </li>
 
                                 <li id="list_btn_tab1">
-                                  <div data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab"
+                                  <div data-bs-toggle="pill" data-bs-target="#v-pills-checkHistory" type="button" role="tab"
                                     aria-controls="v-pills-profile" aria-selected="false" id="v-pills-home-tab"
                                     class="d-flex align-items-center ps-4" style="
                                         text-decoration: none;
@@ -134,6 +155,9 @@
                           </ul>
                           
                         </button>
+
+
+                        
                         
                         <hr class="m-0">
                       </div>
@@ -144,14 +168,15 @@
             </div>
           </div>
         </div>
+        
         <!-- sidebar_end -->
 
-        <div class="col-sm-10 bg2 ">
+        <div class="col-sm-10 bg2 container-fluid">
           <div class="row d-grid vh-100 " style="position: relative;">
             <!-- header -->
-            <div class="bg2_1" >
+            <div class="bg2_1 container-fluid" >
               <div class="row">
-                <div class="col d-flex justify-content-between px-5 py-3">
+                <div class="col-sm-12 d-flex justify-content-between px-5 py-3">
                   <a style="
                         text-decoration: none;
                         color: var(--black);
@@ -176,7 +201,7 @@
             <!-- new_check -->
             
              
-                  <button  id="myButton" style="
+                  <!-- <button  id="myButton" data-bs-toggle="pill" data-bs-target="#v-pills-messages" style="
                         background-color: var(--orange);
                         border: none;
                         padding: 15px 40px;
@@ -188,11 +213,11 @@
                       ">
                     <img class="pe-2" src="/images/icons/plus_icon.svg" alt="" />
                     NEW CHECK
-                  </button>
+                  </button> -->
            
 
             <!-- content_section_tab -->
-            <div class="bg2_3 ps-0 "  style="display: flex;align-items: start;justify-content: center;width: fit-content;">
+            <!-- <div class="bg2_3 ps-0 "  style="display: flex;align-items: start;justify-content: center;width: fit-content;"> -->
               <div class="tab-content" id="v-pills-tabContent">
                 <div class="tab-pane fade show active mt-5" id="v-pills-home" role="tabpanel"
                   aria-labelledby="v-pills-home-tab" tabindex="0">
@@ -227,7 +252,7 @@
                           " class="p-4 border">
                         <div class="d-flex justify-content-end">
                           <div class="dropdown">
-                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown"
                               aria-expanded="false">
                               Period
                             </button>
@@ -426,12 +451,12 @@
                     </form>
                   </div>
                 </div>
-                <div  class="tab-pane fade myList px-5" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab"
+                <div  class="tab-pane fade myList px-5 container-fluid" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab"
                   tabindex="0">
-                  <section >
+                  <section class="row">
                     <div class="container p-0">
-                      <form class="card" style="width: auto;" >
-                        <div class="card-header" style="background-color: var(--capsule);">
+                      <form class="card" style="width: auto;height: 76vh;" >
+                        <div class="card-header" id="card-header" style="background-color: var(--capsule);">
                           <nav class="nav nav-pills nav-fill">
                             <a id="v-pills-wizard-tab" class="nav-link tab-pills" href="#"><span
                                 class="me-2 wizard_number"><b>1</b> </span> <b>Choose an action</b></a>
@@ -443,25 +468,13 @@
                                 class="me-2 wizard_number"><b>4</b> </span><b>Additional session data</b></a>
                             <a id="v-pills-wizard-tab" class="nav-link tab-pills" href="#"><span
                                 class="me-2 wizard_number"><b>5</b> </span><b>Review and confirm</b></a>
+                                <!-- <a id="v-pills-wizard-tab" class="nav-link tab-pills" href="#"><span
+                                  class="me-2 wizard_number"><b>5</b> </span><b>aa</b></a> -->
                           </nav>
                         </div>
-                        <div class="card-body" style="background-color: var(--gray);z-index: 0;height: 65vh;overflow: hidden;">
-                          <div class="tab d-none pt-3 ps-3" style="flex-direction: column;height: 100%;display: flex;align-items:flex-start;justify-content: center;">
-                            <!-- <div class="mb-3">
-                              <label for="name" class="form-label">Name</label>
-                              <input type="text" class="form-control" name="name" id="name"
-                                placeholder="Please enter name" />
-                            </div>
-                            <div class="mb-3">
-                              <label for="email" class="form-label">Email</label>
-                              <input type="email" class="form-control" name="email" id="email"
-                                placeholder="Please enter email" />
-                            </div>
-                            <div class="mb-3">
-                              <label for="password" class="form-label">Password</label>
-                              <input type="password" class="form-control" name="password" id="password"
-                                placeholder="Please enter password" />
-                            </div> -->
+                        <div class="card-body" style="background-color: var(--gray);z-index: 0;overflow: hidden;">
+                          <div id="tab-1" class="tab d-none pt-3 ps-3" style="flex-direction: column;height: 100%;display: flex;align-items:flex-start;justify-content: center;">
+                         
                             <div class="form-check">
                               <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                               <label class="form-check-label" for="flexCheckDefault">
@@ -477,256 +490,532 @@
                             
                           </div>
 
-                          <div class="tab d-none">
-                            <div class="mb-3 mt-3">
-                              <!-- <label for="name" class="form-label">Address 1</label> -->
-                              <input style="border-radius: 10px;"  type="text" class="form-control p-3 " name="name" id="name"
-                                placeholder="First Name (Requered) " />
+                          <div id="tab-2" class="tab d-none">
+                            <div id="individualContent">
+                              <div class="mb-3 mt-3">
+                                <!-- <label for="name" class="form-label">Address 1</label> -->
+                                <input style="border-radius: 10px;"  type="text" class="form-control p-3 " name="name" id="name"
+                                  placeholder="First Name (Requered) " />
+                              </div>
+                              <div class="mb-3">
+                                <!-- <label for="email" class="form-label">Address 2</label> -->
+                                <input style="border-radius: 10px;" type="email" class="form-control p-3 " name="email" id="email"
+                                  placeholder="Middle Name " />
+                              </div>
+                              <div >
+                                <!-- <label for="email" class="form-label">Address 2</label> -->
+                                <input style="border-radius: 10px;" type="email" class="form-control p-3 " name="email" id="email"
+                                  placeholder="Last Name (Requered)" />
+                              </div>
+                              <div class=" text-center py-3">
+                                <b>OR</b>
+                              </div>
+                              <div class="mb-3">
+                                <!-- <label for="email" class="form-label">Address 2</label> -->
+                                <input style="border-radius: 10px;" type="email" class="form-control p-3 " name="email" id="email"
+                                  placeholder="Full Name (Requered) " />
+                              </div>
+                              <div>
+                                <p style="font-size: 14px; font-weight: 300;">
+                                  The person's full name in non-Latin script, or if separating based on First/Middle/Last name is not possible
+                                </p>
+                              </div>
                             </div>
-                            <div class="mb-3">
-                              <!-- <label for="email" class="form-label">Address 2</label> -->
-                              <input style="border-radius: 10px;" type="email" class="form-control p-3 " name="email" id="email"
-                                placeholder="Middle Name " />
+                            <div id="corporateContent" class="d-none">
+                              <div class="mb-3 mt-3">
+                                <!-- <label for="name" class="form-label">Address 1</label> -->
+                                <input style="border-radius: 10px;"  type="text" class="form-control p-3 " name="name" id="name"
+                                  placeholder="Company name (required) " />
+                              </div>
                             </div>
-                            <div >
-                              <!-- <label for="email" class="form-label">Address 2</label> -->
-                              <input style="border-radius: 10px;" type="email" class="form-control p-3 " name="email" id="email"
-                                placeholder="Last Name (Requered)" />
-                            </div>
-                            <div class=" text-center py-3">
-                              <b>OR</b>
-                            </div>
-                            <div class="mb-3">
-                              <!-- <label for="email" class="form-label">Address 2</label> -->
-                              <input style="border-radius: 10px;" type="email" class="form-control p-3 " name="email" id="email"
-                                placeholder="Full Name (Requered) " />
-                            </div>
-                            <div>
-                              <p style="font-size: 14px; font-weight: 300;">
-                                The person's full name in non-Latin script, or if separating based on First/Middle/Last name is not possible
-                              </p>
-                            </div>
+                            
                           </div>
-
-                         <!-- --------corporate_start------ -->
-                       
-                      
-
-                          <div class="tab d-none">
-                             <div class="row pt-3">
-                              <div class="mb-3 col-md-6">
-                                <!-- <input style="border-radius: 10px;" type="text" class="form-control p-3" name="city" id="city"
-                                  placeholder="Please enter city" /> -->
+                          <div id="tab-3" class="tab d-none">
+                            <div id="individualContent1">
+                              <div class="row pt-3">
+                                <div class="mb-3 col-md-6">
+                                  <!-- <input style="border-radius: 10px;" type="text" class="form-control p-3" name="city" id="city"
+                                    placeholder="Please enter city" /> -->
+                                    <form class="row">
+                                      <div class="col">
+                                          <div class="input-group date dob" id="datepicker1">
+                                              <div class="input-group-prepend ">
+                                                  <span style="border-right: none; border-radius: 10px 0 0 10px;background-color: white;" class="input-group-text p-4 pe-0 dob_span">
+                                                    <!-- <i class="fas fa-calendar p-3 pe-0"></i> -->
+                                                  <img src="/images/icons/calender.svg" alt="">
+                                                  </span>
+                                              </div>
+                                              <input style="border-left: none; border-radius: 0 10px 10px 0;box-shadow: none;" type="text" class="form-control p-3 ps-2 dob_input" id="date" placeholder="Date of birth(mm/dd/yyyy)" />
+                                          </div>
+                                      </div>
+                                  </form>
+                                </div>
+                                
+                                <div class="mb-3 col-md-6">
                                   <form class="row">
                                     <div class="col">
-                                        <div class="input-group date dob" id="datepicker1">
+                                        <div class="input-group date dob" id="datepicker2">
                                             <div class="input-group-prepend ">
                                                 <span style="border-right: none; border-radius: 10px 0 0 10px;background-color: white;" class="input-group-text p-4 pe-0 dob_span">
                                                   <!-- <i class="fas fa-calendar p-3 pe-0"></i> -->
                                                 <img src="/images/icons/calender.svg" alt="">
                                                 </span>
                                             </div>
-                                            <input style="border-left: none; border-radius: 0 10px 10px 0;box-shadow: none;" type="text" class="form-control p-3 ps-2 dob_input" id="date" placeholder="Date of birth(mm/dd/yyyy)" />
+                                            <input style="border-left: none; border-radius: 0 10px 10px 0;box-shadow: none;" type="text" class="form-control p-3 ps-2 dob_input" id="date" placeholder="Year of birth(yyyy)" />
                                         </div>
                                     </div>
                                 </form>
-                              </div>
-                              
-                              <div class="mb-3 col-md-6">
-                                <form class="row">
-                                  <div class="col">
-                                      <div class="input-group date dob" id="datepicker2">
-                                          <div class="input-group-prepend ">
-                                              <span style="border-right: none; border-radius: 10px 0 0 10px;background-color: white;" class="input-group-text p-4 pe-0 dob_span">
-                                                <!-- <i class="fas fa-calendar p-3 pe-0"></i> -->
-                                              <img src="/images/icons/calender.svg" alt="">
-                                              </span>
-                                          </div>
-                                          <input style="border-left: none; border-radius: 0 10px 10px 0;box-shadow: none;" type="text" class="form-control p-3 ps-2 dob_input" id="date" placeholder="Year of birth(yyyy)" />
-                                      </div>
-                                  </div>
-                              </form>
-                              </div>
-                            </div>
-                            <div class="mb-3">
-                              <select class="form-control p-3" style="border-radius: 10px;" name="gender" id="gender" required>
-                                  <option value="" selected disabled>Gender</option>
-                                  <option value="male">Male</option>
-                                  <option value="female">Female</option>
-                                  <option value="other">Other</option>
-                              </select>
-                            </div>
-                            <div class="d-flex py-3">
-                                <div class="form-check p-0">
-                                <input class="form-check-input1" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                  Exact match
-                                </label>
                                 </div>
-                                <div class="form-check form-check-inline">
-                                  <input class="form-check-input1" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                  <label class="form-check-label" for="flexRadioDefault2">
-                                    Close match
+                              </div>
+                              <div class="mb-3">
+                                <select class="form-control p-3" style="border-radius: 10px;" name="gender" id="gender" required>
+                                    <option value="" selected disabled>Gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
+                              </div>
+                              <div class="d-flex py-3">
+                                  <div class="form-check p-0">
+                                  <input class="form-check-input1" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                  <label class="form-check-label" for="flexRadioDefault1">
+                                    Exact match
                                   </label>
-                                </div>
-                            </div>
-                          
-                            <div class="py-3">
-                              <span style="font-weight: 600;">Match rate :</span><output>80</output>
-                            <input style="width: 100%;" type="range" min="0" max="100" value="80" name="progress_value[]" data-rangeSlider>
-                            <p style="font-size: 14px;font-weight: 300px;">
-                              Indicates how closely the name being checked matches the name on the matching watchlist profile, with 1 being not close and 100 being very close
-                            </p>
-                              
-                            </div>
-                            <div class="form-check form-switch">
-                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                              <label style="font-weight: 600;" class="form-check-label " for="flexSwitchCheckDefault">Include result entities</label>
-                              <p style="font-size: 14px;">Include full profile information of all matched entities. Default: Yes
-
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input1" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                      Close match
+                                    </label>
+                                  </div>
+                              </div>
+                            
+                              <div class="py-3">
+                                <span style="font-weight: 600;">Match rate :</span><output>80</output>
+                              <input style="width: 100%;" type="range" min="0" max="100" value="80" name="progress_value[]" data-rangeSlider>
+                              <p style="font-size: 14px;font-weight: 300px;">
+                                Indicates how closely the name being checked matches the name on the matching watchlist profile, with 1 being not close and 100 being very close
                               </p>
+                                
+                              </div>
+                              <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                <label style="font-weight: 600;" class="form-check-label " for="flexSwitchCheckDefault">Include result entities</label>
+                                <p style="font-size: 14px;">Include full profile information of all matched entities. Default: Yes
+  
+                                </p>
+                              </div>
+                            </div>
+                            <div id="corporateContent1" class="d-none">
+                              
+                              <div class="mb-3 mt-3">
+                                <!-- <label for="name" class="form-label">Address 1</label> -->
+                                <input style="border-radius: 10px;"  type="text" class="form-control p-3 " name="name" id="name"
+                                  placeholder="Address " />
+                              </div>
+                              <div class="mb-3 mt-3">
+                                <!-- <label for="name" class="form-label">Address 1</label> -->
+                                <input style="border-radius: 10px;"  type="text" class="form-control p-3 " name="name" id="name"
+                                  placeholder="Registration number " />
+                              </div>
+                              <div class="d-flex py-3">
+                                  <div class="form-check p-0">
+                                  <input class="form-check-input1" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                  <label class="form-check-label" for="flexRadioDefault1">
+                                    Exact match
+                                  </label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input1" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                      Close match
+                                    </label>
+                                  </div>
+                              </div>
+                            
+                              <div class="py-3">
+                                <span style="font-weight: 600;">Match rate :</span><output>80</output>
+                              <input style="width: 100%;" type="range" min="0" max="100" value="80" name="progress_value[]" data-rangeSlider>
+                              <p style="font-size: 14px;font-weight: 300px;">
+                                Indicates how closely the name being checked matches the name on the matching watchlist profile, with 1 being not close and 100 being very close
+                              </p>
+                                
+                              </div>
+                              <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                <label style="font-weight: 600;" class="form-check-label " for="flexSwitchCheckDefault">Include result entities</label>
+                                <p style="font-size: 14px;">Include full profile information of all matched entities. Default: Yes
+  
+                                </p>
+                              </div>
                             </div>
                             
                           </div>
 
-                          <div class="tab d-none">
-                            <div class="mb-3 mt-3">
-                              <!-- <label for="name" class="form-label">Address 1</label> -->
-                              <input style="border-radius: 10px;"  type="text" class="form-control p-3 " name="name" id="name"
-                                placeholder="Label (optional) e.g.John Doe, ..." />
+                          <div id="tab-4" class="tab d-none">
+                            <div id="individualContent2">
+                              <div class="mb-3 mt-3">
+                                <!-- <label for="name" class="form-label">Address 1</label> -->
+                                <input style="border-radius: 10px;"  type="text" class="form-control p-3 " name="name" id="name"
+                                  placeholder="Label (optional) e.g.John Doe, ..." />
+                              </div>
+                              <div class="mb-3">
+                            
+                                <textarea style="border-radius: 10px;" class="form-control p-3"  name="company_address" id="company_address" placeholder="Comment"></textarea>
+                              </div>
+                              <hr class="my-4">
+                              <div class="dropdown-container" style="width: 100%;">
+                                <input class="p-3" style="width: 100%;outline: none;border: solid 1px var(--capsule);border-radius: 10px;background-color: var(--white);" type="text" placeholder="Advanced Options" id="dropdownInput" readonly>
+                                <i class="fas fa-caret-down dropdown-icon"></i>
+                                <div class="dropdown-content" id="myDropdown" style="width: 100%;">
+                                  <input class="p-3" style="width: 100%;border: none; border-bottom: solid 1px var(--black);" type="text" placeholder="Relay state (optional) ">
+                                  <input class="p-3" style="width: 100%;border: none; border-bottom: solid 1px var(--black);" type="text" placeholder="Webhook target URL (optional)">
+                                </div>
+                              </div>
                             </div>
-                            <div class="mb-3">
-                          
-                              <textarea style="border-radius: 10px;" class="form-control p-3"  name="company_address" id="company_address" placeholder="Comment"></textarea>
-                            </div>
-                            <hr class="my-4">
-                            <div class="dropdown-container" style="width: 100%;">
-                              <input class="p-3" style="width: 100%;outline: none;border: solid 1px var(--capsule);border-radius: 10px;background-color: var(--white);" type="text" placeholder="Advanced Options" id="dropdownInput" readonly>
-                              <i class="fas fa-caret-down dropdown-icon"></i>
-                              <div class="dropdown-content" id="myDropdown" style="width: 100%;">
-                                <input class="p-3" style="width: 100%;border: none; border-bottom: solid 1px var(--black);" type="text" placeholder="Relay state (optional) ">
-                                <input class="p-3" style="width: 100%;border: none; border-bottom: solid 1px var(--black);" type="text" placeholder="Webhook target URL (optional)">
+                            <div id="corporateContent2" class="d-none">
+                              <div class="mb-3 mt-3">
+                                <!-- <label for="name" class="form-label">Address 1</label> -->
+                                <input style="border-radius: 10px;"  type="text" class="form-control p-3 " name="name" id="name"
+                                  placeholder="Label (optional) e.g.John Doe, ..." />
+                              </div>
+                              <div class="mb-3">
+                            
+                                <textarea style="border-radius: 10px;" class="form-control p-3"  name="company_address" id="company_address" placeholder="Comment"></textarea>
+                              </div>
+                              <hr class="my-4">
+                              <div class="dropdown-container" style="width: 100%;">
+                                <input class="p-3" style="width: 100%;outline: none;border: solid 1px var(--capsule);border-radius: 10px;background-color: var(--white);" type="text" placeholder="Advanced Options" id="dropdownInput1" readonly>
+                                <i class="fas fa-caret-down dropdown-icon"></i>
+                                <div class="dropdown-content" id="myDropdown1" style="width: 100%;">
+                                  <input class="p-3" style="width: 100%;border: none; border-bottom: solid 1px var(--black);" type="text" placeholder="Relay state (optional) ">
+                                  <input class="p-3" style="width: 100%;border: none; border-bottom: solid 1px var(--black);" type="text" placeholder="Webhook target URL (optional)">
+                                </div>
                               </div>
                             </div>
                           </div>
-                          <div class="tab d-none">
-                            <div class="mb-3 mt-3">
-                              <form>
-                                <div class="form-group row">
-                                  <label for="firstName" class="col-sm-2 col-form-label">First Name</label>
-                                  <div class="col">
-                                    <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                          <div id="tab-5" class="tab d-none">
+                            <div id="individualContent3">
+                              <div class="mb-3 mt-3">
+                                <form>
+                                  <div class="form-group row">
+                                    <label for="firstName" class="col-sm-2 col-form-label">First Name</label>
+                                    <div class="col">
+                                      <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                    </div>
                                   </div>
-                                </div>
-                                <div class="form-group row">
-                                  <label for="lastName" class="col-sm-2 col-form-label">Last Name</label>
-                                  <div class="col">
-                                    <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                  <div class="form-group row">
+                                    <label for="lastName" class="col-sm-2 col-form-label">Last Name</label>
+                                    <div class="col">
+                                      <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                    </div>
                                   </div>
-                                </div>
-                                <div class="form-group row">
-                                  <label for="lastName" class="col-sm-2 col-form-label">Middle Name</label>
-                                  <div class="col">
-                                    <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                  <div class="form-group row">
+                                    <label for="lastName" class="col-sm-2 col-form-label">Middle Name</label>
+                                    <div class="col">
+                                      <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                    </div>
                                   </div>
-                                </div>
-                                <div class="form-group row">
-                                  <label for="lastName" class="col-sm-2 col-form-label">Full Name</label>
-                                  <div class="col">
-                                    <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                  <div class="form-group row">
+                                    <label for="lastName" class="col-sm-2 col-form-label">Full Name</label>
+                                    <div class="col">
+                                      <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                    </div>
                                   </div>
-                                </div>
-                                <div class="form-group row">
-                                  <label for="lastName" class="col-sm-2 col-form-label">Country</label>
-                                  <div class="col">
-                                    <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                  <div class="form-group row">
+                                    <label for="lastName" class="col-sm-2 col-form-label">Country</label>
+                                    <div class="col">
+                                      <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                    </div>
                                   </div>
-                                </div>
-                                <div class="form-group row">
-                                  <label for="lastName" class="col-sm-2 col-form-label">Date of Birth</label>
-                                  <div class="col">
-                                    <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                  <div class="form-group row">
+                                    <label for="lastName" class="col-sm-2 col-form-label">Date of Birth</label>
+                                    <div class="col">
+                                      <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                    </div>
                                   </div>
-                                </div>
-                                <div class="form-group row">
-                                  <label for="lastName" class="col-sm-2 col-form-label">Gender</label>
-                                  <div class="col">
-                                    <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                  <div class="form-group row">
+                                    <label for="lastName" class="col-sm-2 col-form-label">Gender</label>
+                                    <div class="col">
+                                      <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                    </div>
                                   </div>
-                                </div>
-                                <div class="form-group row">
-                                  <label for="lastName" class="col-sm-2 col-form-label">Match type</label>
-                                  <div class="col">
-                                    <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                  <div class="form-group row">
+                                    <label for="lastName" class="col-sm-2 col-form-label">Match type</label>
+                                    <div class="col">
+                                      <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                    </div>
                                   </div>
-                                </div>
-                                <div class="form-group row">
-                                  <label for="lastName" class="col-sm-2 col-form-label">Match rate</label>
-                                  <div class="col">
-                                    <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                  <div class="form-group row">
+                                    <label for="lastName" class="col-sm-2 col-form-label">Match rate</label>
+                                    <div class="col">
+                                      <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                    </div>
                                   </div>
-                                </div>
-                                <div class="form-group row">
-                                  <label for="lastName" class="col-sm-2 col-form-label">Exclude deceased persons</label>
-                                  <div class="col">
-                                    <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                  <div class="form-group row">
+                                    <label for="lastName" class="col-sm-2 col-form-label">Exclude deceased persons</label>
+                                    <div class="col">
+                                      <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                    </div>
                                   </div>
-                                </div>
-                                <div class="form-group row">
-                                  <label for="includeResultEntities" class="col-sm-2 col-form-label">Include result entities</label>
-                                  <div class="col">
-                                    <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                  <div class="form-group row">
+                                    <label for="includeResultEntities" class="col-sm-2 col-form-label">Include result entities</label>
+                                    <div class="col">
+                                      <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                    </div>
                                   </div>
-                                </div>
-                                <div class="form-group row">
-                                  <label for="comment" class="col-sm-2 col-form-label">Include web search</label>
-                                  <div class="col">
-                                    <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                  <div class="form-group row">
+                                    <label for="comment" class="col-sm-2 col-form-label">Include web search</label>
+                                    <div class="col">
+                                      <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                    </div>
                                   </div>
-                                </div>
-                                <div class="form-group row">
-                                  <label for="comment" class="col-sm-2 col-form-label">Comment</label>
-                                  <div class="col">
-                                    <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                  <div class="form-group row">
+                                    <label for="comment" class="col-sm-2 col-form-label">Comment</label>
+                                    <div class="col">
+                                      <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                    </div>
                                   </div>
-                                </div>
-                                <div class="form-group row">
-                                  <label for="comment" class="col-sm-2 col-form-label">Relay state</label>
-                                  <div class="col">
-                                    <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                  <div class="form-group row">
+                                    <label for="comment" class="col-sm-2 col-form-label">Relay state</label>
+                                    <div class="col">
+                                      <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                    </div>
                                   </div>
-                                </div>
-                                <div class="form-group row">
-                                  <label for="comment" class="col-sm-2 col-form-label">Webhook URL</label>
-                                  <div class="col">
-                                    <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                  <div class="form-group row">
+                                    <label for="comment" class="col-sm-2 col-form-label">Webhook URL</label>
+                                    <div class="col">
+                                      <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                    </div>
                                   </div>
-                                </div>
-                              </form>
+                                </form>
+                              </div>
+                            </div>
+                            <div id="corporateContent3" class="d-none">
+                              <div class="mb-3 mt-3">
+                                <form>
+                                  <div class="form-group row">
+                                    <label for="firstName" class="col-sm-2 col-form-label">Company Name</label>
+                                    <div class="col">
+                                      <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label for="lastName" class="col-sm-2 col-form-label">Address</label>
+                                    <div class="col">
+                                      <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label for="lastName" class="col-sm-2 col-form-label">Registration Number</label>
+                                    <div class="col">
+                                      <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label for="lastName" class="col-sm-2 col-form-label">Match type</label>
+                                    <div class="col">
+                                      <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label for="lastName" class="col-sm-2 col-form-label">Match rate</label>
+                                    <div class="col">
+                                      <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label for="lastName" class="col-sm-2 col-form-label">Include Web search</label>
+                                    <div class="col">
+                                      <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label for="lastName" class="col-sm-2 col-form-label">Comment</label>
+                                    <div class="col">
+                                      <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label for="lastName" class="col-sm-2 col-form-label">Relay state</label>
+                                    <div class="col">
+                                      <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label for="lastName" class="col-sm-2 col-form-label">Webhook URL</label>
+                                    <div class="col">
+                                      <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
                             </div>
                           </div>
+
+
+                          <div id="tab-6" class="tab d-none">
+                            <div id="individualContent3">
+                              <div class="row">
+                                <div class="col-sm-12">
+                                  <div class="row">
+                                    <div class="col-sm-6">
+                                      <h2 class="px-3">305ac5b4-cf1c-4ac9-91f8-09b0461c9163</h2>
+                                    </div>
+                                    <div class="col-sm-6 TopBtnresultPage">
+                                      <div class="d-flex">
+                                        <button><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+                                          <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5"/>
+                                        </svg></button>
+                                        <button class="ms-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
+                                          <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                          <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                                        </svg></button>
+                                        <button class="ms-2">TO REVIEW</button>
+                                        <button class="ms-2"><svg class="me-1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
+                                          <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2z"/>
+                                          <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466"/>
+                                        </svg>RE-PROCESS</button>
+                                        <button class="ms-2"><svg class="me-1" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-file-earmark-text" viewBox="0 0 16 16">
+                                          <path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5"/>
+                                          <path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"/>
+                                        </svg>REPORT</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-sm-12 mt-3">
+                                  <form method="get" >
+                                    <ul class='accordion p-0' >
+                                      <li class="accordion-item">
+                                        <label class="accordion-trigger" for="item-1">I am an accordion item
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down">
+                                            <path d="m6 9 6 6 6-6" />
+                                          </svg> </label>
+                                  
+                                        <input tabindex="1" name="my-accordion" class="accordion-action" id="item-1" type="radio" />
+                                        <div class="accordion-collapsable">
+                                          <div class="accordion-content">
+                                            <p>Cras cursus consequat lectus, et pellentesque nisl semper id. Vivamus at tellus non erat interdum scelerisque. Pellentesque maximus a magna eget volutpat. Duis id lorem id neque ornare finibus. Nam luctus arcu et magna ullamcorper venenatis. Maecenas turpis neque, elementum et bibendum et, lobortis vitae ligula. </p>
+                                          </div>
+                                        </div>
+                                        <button type="reset" class="accordion-reset" />
+                                      </li>
+                                  
+                                      <li class="accordion-item">
+                                        <label class="accordion-trigger" for="item-2">I am also an accordion item <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down">
+                                            <path d="m6 9 6 6 6-6" />
+                                          </svg> </label>
+                                        <input tabindex="1" name="my-accordion" class="accordion-action" id="item-2" type="radio" />
+                                        <div class="accordion-collapsable">
+                                          <div class="accordion-content">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam velit nunc, vel venenatis risus auctor at. Nunc sed felis id lectus porttitor mollis. Aenean quis ante consequat, lacinia dolor in, molestie enim. </p>
+                                          </div>
+                                        </div>
+                                        <button type="reset" class="accordion-reset" />
+                                      </li>
+                                  
+                                      <li class="accordion-item">
+                                        <label class="accordion-trigger" for="item-3">I don't know what I am <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down">
+                                            <path d="m6 9 6 6 6-6" />
+                                          </svg> </label>
+                                        <input tabindex="1" name="my-accordion" class="accordion-action" id="item-3" type="radio" />
+                                        <div class="accordion-collapsable">
+                                          <div class="accordion-content">
+                                            <p>In ultrices dui eget ligula cursus dictum. Duis hendrerit ex a felis placerat suscipit. Aliquam vitae turpis orci. Donec facilisis pulvinar nisi, quis tincidunt velit consectetur vel. Fusce elementum eros sit amet enim faucibus, a accumsan leo condimentum. Maecenas non lectus vitae mauris mattis fermentum a in dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                                          </div>
+                                        </div>
+                                        <button type="reset" class="accordion-reset" />
+                                      </li>
+                                    </ul>
+                                  
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                            <div id="corporateContent3" class="d-none">
+                              <div class="mb-3 mt-3">
+                                <form>
+                                  <div class="form-group row">
+                                    <label for="firstName" class="col-sm-2 col-form-label">Company Name</label>
+                                    <div class="col">
+                                      <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label for="lastName" class="col-sm-2 col-form-label">Address</label>
+                                    <div class="col">
+                                      <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label for="lastName" class="col-sm-2 col-form-label">Registration Number</label>
+                                    <div class="col">
+                                      <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label for="lastName" class="col-sm-2 col-form-label">Match type</label>
+                                    <div class="col">
+                                      <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label for="lastName" class="col-sm-2 col-form-label">Match rate</label>
+                                    <div class="col">
+                                      <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label for="lastName" class="col-sm-2 col-form-label">Include Web search</label>
+                                    <div class="col">
+                                      <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label for="lastName" class="col-sm-2 col-form-label">Comment</label>
+                                    <div class="col">
+                                      <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label for="lastName" class="col-sm-2 col-form-label">Relay state</label>
+                                    <div class="col">
+                                      <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label for="lastName" class="col-sm-2 col-form-label">Webhook URL</label>
+                                    <div class="col">
+                                      <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        
+
+
+
+
+
+
+                        <!-- ----sumbmition_page_start -->
+
                         </div>
 
 
 
 
-
-<!-- ------------------------------corporate_cardbody -->
-
-
-<!-- end -->
-
-
-
-
-
+                        <!-- end  -->
 
                         <div class="d-flex justify-content-between card-footer text-end " style="border: none;background-color: var(--gray);">
                           <button style="text-decoration: none;font-size: 14px;" type="button" id="back_button" class="btn btn-link" >
                             Cancel
                           </button>
                           <div>
-                            <button style="box-shadow: none; z-index: 1; font-weight: 500; text-decoration: none;color: var(--white);width: 150px;border-radius: 10px;font-size: 14px;" type="button" id="back_button" class="btn btn-link py-3 btn_back" onclick="back()">
+                            <button style="box-shadow: none; z-index: 1; font-weight: 500; text-decoration: none;color: var(--white);width: 150px;border-radius: 10px;font-size: 14px;" type="button" id="back1_button" class="btn btn-link py-3 btn_back" onclick="back()">
                               BACK<span class="iconamoon--arrow-right-2-duotone"></span>
                             </button>
                             <button  style="box-shadow: none; font-weight: 500; color: var(--white);text-decoration: none;min-width: 150px;border-radius: 10px;font-size: 14px;" type="button" id="next_button" class="btn ms-auto py-3 btn_continue" onclick="next()">
@@ -737,9 +1026,155 @@
                       </form>
                     </div>
                   </section>
-
-
                 </div>
+                
+
+<!-- checkHistory_start -->
+
+                <div class="tab-pane fade mt-5 container-fluid" style="width: 100%;height: 65vh;" id="v-pills-checkHistory" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">
+
+                    <div class="row" >
+                      <div class="col-sm-12 p-0">
+                        
+                    <div class="row">
+                <div class="col-sm-12 p-0">
+                  <div class="col-sm-12 p-5 pb-0 pt-0">
+                    <div style="
+                          background-color: var(--white);
+                          max-height: 100%;
+                          overflow: hidden;
+                        ">
+
+                      <div style="
+                            height:73vh;
+                            overflow: auto;
+                            overflow-x: hidden;
+                            padding-bottom: 60px;
+                          " class="tab-content pt-1 px-2" id="myTabContent">
+                        <div class="tab-pane fade show active row g-2 " id="home-tab-pane1" role="tabpanel"
+                          aria-labelledby="home-tab" tabindex="0">
+                          <div class="search-filter-row pb-3" style="position: sticky;top: 0;">
+                            <div class="form-group has-search search-box">
+                              <span class="fa fa-search form-control-feedback"></span>
+                              <input type="text" id="searchInput" class="form-control p-3 ps-5" placeholder="Search">
+                            </div>
+                            <!-- <div class="search-box">
+                                <i class="search-icon fas fa-search"></i>
+                                <input type="text" id="searchInput" placeholder="Search...">
+                            </div> -->
+                            <button class="filter-button d-flex px-4 py-3 align-items-center ms-3" onclick="filterTable()">
+                                <i class="fas fa-filter pe-2"></i> <div>Filter</div>
+                            </button>
+                          </div>
+                    
+                        <table id="myTable">
+                            <thead>
+                                <tr class="table-head">
+                                    <th>Status</th>
+                                    <th>Label</th>
+                                    <th>Action</th>
+                                    <th>Created</th>
+                                    <th>Last action update</th>
+                                </tr>
+                            </thead>
+                            <tbody >
+                                <tr class="table-row" >
+                                    <td style="padding-left: 20px;"><span class="review py-2 px-3">To Review</span></td>
+                                    <td><span style="font-weight: 600;">Mohanlal</span> <br>
+                                      613d9a74-ed67-45e0-96cd-7824c7b6155a</td>
+                                    <td>Individual</td>
+                                    <td>2024-01-18 06:37:31</td>
+                                    <td>2024-01-18 06:37:43
+                                    </td>
+                                </tr>
+                                <tr class="table-row">
+                                  <td style="padding-left: 20px;"><span class="review_c py-2 px-3">Finalized</span></td>
+                                  <td><span style="font-weight: 600;">Mohanlal</span> <br>
+                                    613d9a74-ed67-45e0-96cd-7824c7b6155a</td>
+                                  <td>Individual</td>
+                                  <td>2024-01-18 06:37:31</td>
+                                  <td>2024-01-18 06:37:43
+                                  </td>
+                              </tr>
+                              <tr class="table-row">
+                                <td style="padding-left: 20px;"><span class="review py-2 px-3">To Review</span></td>
+                                <td><span style="font-weight: 600;">Mohanlal</span> <br>
+                                  613d9a74-ed67-45e0-96cd-7824c7b6155a</td>
+                                <td>Individual</td>
+                                <td>2024-01-18 06:37:31</td>
+                                <td>2024-01-18 06:37:43
+                                </td>
+                            </tr>
+                            <tr class="table-row">
+                              <td style="padding-left: 20px;"><span class="review py-2 px-3">To Review</span></td>
+                              <td><span style="font-weight: 600;">Mohanlal</span> <br>
+                                613d9a74-ed67-45e0-96cd-7824c7b6155a</td>
+                              <td>Individual</td>
+                              <td>2024-01-18 06:37:31</td>
+                              <td>2024-01-18 06:37:43
+                              </td>
+                          </tr>
+                          <tr class="table-row">
+                            <td style="padding-left: 20px;"><span class="review_c py-2 px-3">Finalized</span></td>
+                            <td><span style="font-weight: 600;">Mohanlal</span> <br>
+                              613d9a74-ed67-45e0-96cd-7824c7b6155a</td>
+                            <td>Individual</td>
+                            <td>2024-01-18 06:37:31</td>
+                            <td>2024-01-18 06:37:43
+                            </td>
+                        </tr>
+                        <tr class="table-row">
+                          <td style="padding-left: 20px;"><span class="review_c py-2 px-3">Finalized</span></td>
+                          <td><span style="font-weight: 600;">Mohanlal</span> <br>
+                            613d9a74-ed67-45e0-96cd-7824c7b6155a</td>
+                          <td>Individual</td>
+                          <td>2024-01-18 06:37:31</td>
+                          <td>2024-01-18 06:37:43
+                          </td>
+                      </tr>
+                      <tr class="table-row">
+                        <td style="padding-left: 20px;"><span class="review_c py-2 px-3">Finalized</span></td>
+                        <td><span style="font-weight: 600;">Mohanlal</span> <br>
+                          613d9a74-ed67-45e0-96cd-7824c7b6155a</td>
+                        <td>Individual</td>
+                        <td>2024-01-18 06:37:31</td>
+                        <td>2024-01-18 06:37:43
+                        </td>
+                    </tr> 
+                    <tr class="table-row">
+                      <td style="padding-left: 20px;"><span class="review_c py-2 px-3">Finalized</span></td>
+                      <td><span style="font-weight: 600;">Mohanlal</span> <br>
+                        613d9a74-ed67-45e0-96cd-7824c7b6155a</td>
+                      <td>Individual</td>
+                      <td>2024-01-18 06:37:31</td>
+                      <td>2024-01-18 06:37:43
+                      </td>
+                  </tr>
+                  <tr class="table-row">
+                    <td style="padding-left: 20px;"><span class="review_c py-2 px-3">Finalized</span></td>
+                    <td><span style="font-weight: 600;">Mohanlal</span> <br>
+                      613d9a74-ed67-45e0-96cd-7824c7b6155a</td>
+                    <td>Individual</td>
+                    <td>2024-01-18 06:37:31</td>
+                    <td>2024-01-18 06:37:43
+                    </td>
+                </tr>
+                                <!-- Add more rows as needed -->
+                            </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+               </div>
+              </div>
+                   </div>
+                 </div>
+
+              </div>
+
+<!-- end -->
+
                 <div class="tab-pane fade mt-5" id="v-pills-notifications" role="tabpanel" aria-labelledby="v-pills-settings-tab"
                   tabindex="0">
                   <div class="col-sm-12 p-5 pb-0 pt-5">
@@ -850,7 +1285,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          <!-- </div> -->
         </div>
       </div>
     </div>
@@ -862,6 +1297,11 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/css/bootstrap-datepicker.min.css">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/js/bootstrap-datepicker.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- ----table -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.0/bootstrap-table.js"></script>
+<script src="//rawgit.com/hhurz/tableExport.jquery.plugin/master/tableExport.js"></script>
 
 </body>
 

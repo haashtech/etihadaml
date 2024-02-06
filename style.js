@@ -73,7 +73,25 @@ $("ul.nav li.dropdown").hover(
 
 
 // step_wizard_start
+var current = 1;
+    var tabs = $(".tab");
+    var tabsPill = $(".tab-pills");
 
+    loadFormData(current);
+
+    function loadFormData(n) {
+      tabs.hide();
+      $("#tab-" + n).removeClass("d-none");
+    }
+
+    function showTab(tabNumber) {
+      current = tabNumber;
+      loadFormData(current);
+    }
+
+    
+
+   
 var current = 0;
 var tabs = $(".tab");
 var tabsPill = $(".tab-pills");
@@ -82,20 +100,30 @@ loadFormData(current);
 
 function loadFormData(n) {
   const nextButton = $("#next_button");
+  const backButton = $("#back1_button");
+  const cardHeader = $("#card-header");
+  
 
   $(tabsPill[n]).addClass("active").addClass("completed");
   $(tabs[n]).removeClass("d-none");
   $("#back_button").attr("disabled", n === 0 ? true : false);
 
-  if (n + 1 === tabs.length) {
+  if (n+2 === tabs.length) {
     // Change text to "SEND REQUEST" without changing the background color
-    nextButton.text("SEND REQUEST").css("background-color", "var(--submit)").removeAttr("onclick");
+    nextButton.text("SEND REQUEST").css("background-color", "var(--submit)")
     // Remove hover effect when it's the final step
-    nextButton.off('mouseenter mouseleave').css("background-color", "var(--submit)");
-  } else {
+    // nextButton.off('mouseenter mouseleave').css("background-color", "var(--submit)");
+  }else if(tabs.length===n+1){
+    nextButton.css("display", "none")
+    backButton.css("display", "none")
+    cardHeader.css("display", "none")
+
+  }
+  else {
     // Reset the text to "CONTINUE" and keep the background color
     nextButton.text("CONTINUE").css("background-color", "var(--orange)").attr("type", "button").attr("onclick", "next()");
-
+    // nextButton.css("display", "inline")
+    
     // Add hover effect
     if(nextButton.text=="CONTINUE"){
       nextButton.hover(
@@ -118,7 +146,35 @@ loadFormData(current);
 function next() {
   $(tabs[current]).addClass("d-none");
   $(tabsPill[current]).removeClass("active");
+  
+    var individualCheckbox = $("#flexCheckDefault");
+    var corporateCheckbox = $("#flexCheckChecked");
 
+    // Check which checkbox is selected
+    if (individualCheckbox.prop("checked")) {
+      $("#individualContent").removeClass("d-none");
+      $("#corporateContent").addClass("d-none");
+      $("#individualContent1").removeClass("d-none");
+      $("#corporateContent1").addClass("d-none");
+      $("#individualContent2").removeClass("d-none");
+      $("#corporateContent2").addClass("d-none");
+      $("#individualContent3").removeClass("d-none");
+      $("#corporateContent3").addClass("d-none");
+    } else if (corporateCheckbox.prop("checked")) {
+      $("#corporateContent").removeClass("d-none");
+      $("#individualContent").addClass("d-none");
+      $("#corporateContent1").removeClass("d-none");
+      $("#individualContent1").addClass("d-none");
+      $("#corporateContent2").removeClass("d-none");
+      $("#individualContent2").addClass("d-none");
+      $("#corporateContent3").removeClass("d-none");
+      $("#individualContent3").addClass("d-none");
+   
+    
+    // Move to the next tab
+    // current++;
+    // loadFormData(current);
+  }
   current++;
   loadFormData(current);
 }
@@ -377,7 +433,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 var dropdown = document.getElementById("myDropdown");
-var input = document.getElementById("dropdownInput");
+var input = document.getElementById("dropdownInput1");
 
 document.addEventListener("click", function(event) {
   if (!event.target.closest('.dropdown-container')) {
@@ -389,6 +445,22 @@ input.addEventListener("click", function(event) {
   event.stopPropagation();
   dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
 });
+
+
+var dropdown1 = document.getElementById("myDropdown1");
+var input1 = document.getElementById("dropdownInput1");
+
+document.addEventListener("click", function(event) {
+  if (!event.target.closest('.dropdown-container')) {
+    dropdown1.style.display = 'none';
+  }
+});
+
+input1.addEventListener("click", function(event) {
+  event.stopPropagation();
+  dropdown1.style.display = (dropdown1.style.display === 'block') ? 'none' : 'block';
+});
+
 
 $(document).ready(function () {
   $('#datepicker1').datepicker({
@@ -405,3 +477,36 @@ $(document).ready(function () {
       minViewMode: "years"
   });
 });
+
+
+
+
+
+document.getElementById('myButton').addEventListener('click', function() {
+  // Trigger a click event on the button to open the associated tab
+  document.getElementById('myButton').click();
+});
+
+
+
+
+function filterTable() {
+  // Add your filter logic here
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("searchInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0]; // Change the index to match the column you want to search
+      if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+          } else {
+              tr[i].style.display = "none";
+          }
+      }
+  }
+}
