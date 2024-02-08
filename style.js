@@ -273,6 +273,7 @@ function back() {
   document.addEventListener('DOMContentLoaded', function() {
     const button = document.getElementById('myButton');
     const hideButtonTab = document.getElementById('hide_btn_tab');
+    const hideButtonTab1 = document.getElementById('hide_btn_tab1');
     const listButtonTab1 = document.getElementById('list_btn_tab1');
     const listButtonTab2 = document.getElementById('list_btn_tab2');
     const tab2 = document.getElementById('btn_dashboard_tab');
@@ -287,6 +288,14 @@ function back() {
 
     // Add click event listener to Hide Button Tab
     hideButtonTab.addEventListener('click', function(event) {
+      // Hide the button when in Hide Button Tab
+      button.style.display = 'none';
+      // Stop the event from propagating to the body click event
+      event.stopPropagation();
+      // Update the current active tab
+      currentActiveTab = hideButtonTab;
+    });
+    hideButtonTab1.addEventListener('click', function(event) {
       // Hide the button when in Hide Button Tab
       button.style.display = 'none';
       // Stop the event from propagating to the body click event
@@ -568,4 +577,7 @@ function switchToTab(tabId) {
       }
   });
 }
+
+
+
 

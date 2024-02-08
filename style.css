@@ -104,16 +104,18 @@ section {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  width: fit-content;
   /* background: #fff; */
   padding: 15px;
   font-size: 13px;
   /* box-shadow: 1px 1px 0 #ddd, 2px 2px 0 #bbb; */
 }
 .legend li {
-  width: 110px;
+  width: auto;
   height: 1.25em;
   margin-bottom: 0.7em;
   padding-left: 0.5em;
+  border-radius: 10px 10px 10px 10px;
   border-left: 1.25em solid black;
 }
 .legend em {
@@ -150,10 +152,10 @@ footer {
 
 
 /* Style the scrollbar track */
-::-webkit-scrollbar {
-    width: 7px; /* Set the width of the scrollbar */
+/* ::-webkit-scrollbar {
+    width: 7px; 
   }
-  
+   */
   /* Style the scrollbar handle */
   ::-webkit-scrollbar-thumb {
     background-color: var(--text); /* Set the color of the scrollbar handle */
@@ -552,4 +554,10 @@ tr{
 .accordion .accordion-item{
   border-radius: 16px;
 }
+
+
+
+
+/* ----------------------------MEDIA QUERY start----------------------------- */
+
 
