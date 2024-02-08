@@ -1,88 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Latest compiled and minified CSS -->
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-  crossorigin="anonymous">
-
-
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Step Wizard Example</title>
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
 </head>
 <body>
-    <div class="accordion" id="accordionExample">
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    Accordion Item #1
-                </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-    
-                    <div class="accordion" id="sub-accordionExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="sub-headingOne">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Accordion Item #1
-                                </button>
-                            </h2>
-                            <div id="sub-collapseOne" class="accordion-collapse collapse show" aria-labelledby="sub-headingOne" data-bs-parent="#sub-accordionExample">
-                                <div class="accordion-body">
-                                    <strong>This is the first item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="sub-headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseTwo" aria-expanded="false" aria-controls="sub-collapseTwo">
-                                    Accordion Item #2
-                                </button>
-                            </h2>
-                            <div id="sub-collapseTwo" class="accordion-collapse collapse" aria-labelledby="sub-headingTwo" data-bs-parent="#sub-accordionExample">
-                                <div class="accordion-body">
-                                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    
-        </div>
-    </div>
-    </div>
-    <div class="accordion-item">
-        <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Accordion Item #2
-            </button>
-        </h2>
-        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-            </div>
-        </div>
-    </div>
-    <div class="accordion-item">
-        <h2 class="accordion-header" id="headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                Accordion Item #3
-            </button>
-        </h2>
-        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-            </div>
-        </div>
-    </div>
-    </div>
-      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofE9EMq6CkKc5KjtX4yo5qFd5/F7GpZ1b" crossorigin="anonymous"></script>
+
+<button id="startButton">Start Step Wizard</button>
+
+<div id="step1" class="step">Step 1: Pill 1</div>
+<div id="step2" class="step hidden">Step 2: Pill 2</div>
+<div id="step3" class="step hidden">Step 3: Pill 3</div>
+<div id="step4" class="step hidden">Step 4: Pill 4</div>
+<div id="step5" class="step hidden">Step 5: Pill 5</div>
+
+<button id="prevButton" class="hidden">Previous</button>
+<button id="nextButton" class="hidden">Next</button>
+
+<script>
+  var currentCondition = 1;
+  var totalConditions = 5; // Adjust this based on the total number of steps
+
+  document.getElementById('startButton').addEventListener('click', function() {
+    resetWizard();
+  });
+
+  document.getElementById('nextButton').addEventListener('click', function() {
+    navigateStep('next');
+  });
+
+  document.getElementById('prevButton').addEventListener('click', function() {
+    navigateStep('prev');
+  });
+
+  function resetWizard() {
+    currentCondition = 1;
+    updateButtons();
+    showStep(currentCondition);
+  }
+
+  function navigateStep(direction) {
+    if (direction === 'next' && currentCondition < totalConditions) {
+      currentCondition++;
+    } else if (direction === 'prev' && currentCondition > 1) {
+      currentCondition--;
+    }
+
+    updateButtons();
+    showStep(currentCondition);
+  }
+
+  function updateButtons() {
+    document.getElementById('prevButton').classList.toggle('hidden', currentCondition === 1);
+    document.getElementById('nextButton').classList.toggle('hidden', currentCondition === totalConditions);
+  }
+
+  function showStep(condition) {
+    // Hide all steps
+    document.querySelectorAll('.step').forEach(function(step) {
+      step.classList.add('hidden');
+    });
+
+    // Show the current step
+    var currentStep = document.getElementById('step' + condition);
+    if (currentStep) {
+      currentStep.classList.remove('hidden');
+    }
+  }
+</script>
 
 </body>
 </html>

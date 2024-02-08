@@ -1,7 +1,8 @@
 :root {
     --orange: #FF5428;
     --blue: #1D53B4;
-    --black: #383838;
+    /* --black: #383838; */
+    --black: #212121;
     --white: #FFFFFF;
     --gray:#efefef;
     --text:#686868;
@@ -276,9 +277,9 @@ footer {
 
 
 .nav-link{
- 
   color: var(--navlink);
 }
+
 
 
 .wizard_number{
@@ -293,7 +294,15 @@ footer {
   color: var(--black); 
 }
 
-
+.tab-pills{
+  color: var(--navlink);
+}
+.tab-pills:hover{
+  color: var(--navlink);
+}
+.tab-pills.completed:hover {
+  color: var(--black); 
+}
 
 
 
@@ -533,6 +542,14 @@ tr{
 
 .TopBtnresultPage button{
   padding: 10px 20px;
-  background-color: var(--black);
-  color: var(--white);
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
 }
+
+
+
+.accordion .accordion-item{
+  border-radius: 16px;
+}
+

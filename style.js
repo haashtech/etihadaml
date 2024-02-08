@@ -73,7 +73,7 @@ $("ul.nav li.dropdown").hover(
 
 
 // step_wizard_start
-var current = 1;
+var current = 0;
     var tabs = $(".tab");
     var tabsPill = $(".tab-pills");
 
@@ -277,6 +277,7 @@ function back() {
     const listButtonTab2 = document.getElementById('list_btn_tab2');
     const tab2 = document.getElementById('btn_dashboard_tab');
     const tab3 = document.getElementById('btn_profile_tab');
+    const myButton = document.getElementById('myButton');
 
     // Initially hide the button
     // button.style.display = 'block';
@@ -293,6 +294,16 @@ function back() {
       // Update the current active tab
       currentActiveTab = hideButtonTab;
     });
+
+    myButton.addEventListener('click', function(event) {
+      // Hide the button when in Hide Button Tab
+      button.style.display = 'none';
+      // Stop the event from propagating to the body click event
+      event.stopPropagation();
+      // Update the current active tab
+      currentActiveTab = hideButtonTab;
+    });
+
 
     // Add click event listener to Tab 2
     tab2.addEventListener('click', function() {
@@ -485,6 +496,7 @@ $(document).ready(function () {
 document.getElementById('myButton').addEventListener('click', function() {
   // Trigger a click event on the button to open the associated tab
   document.getElementById('myButton').click();
+  
 });
 
 
@@ -530,3 +542,30 @@ var collapseList = collapseElementList.map(function (collapseEl) {
         })
     })
 })
+
+
+
+// newCheck button start--
+
+function switchToTab(tabId) {
+  var tabs = document.querySelectorAll('.nav-link');
+  tabs.forEach(function (tab) {
+      if (tab.getAttribute('data-bs-target') === '#' + tabId) {
+          tab.classList.add('active');
+          
+      } else {
+          tab.classList.remove('active');
+      }
+  });
+
+  var tabContent = document.querySelectorAll('.tab-pane');
+  tabContent.forEach(function (content) {
+      if (content.getAttribute('id') === tabId) {
+          content.classList.add('show', 'active');
+
+      } else {
+          content.classList.remove('show', 'active');
+      }
+  });
+}
+
