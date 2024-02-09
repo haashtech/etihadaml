@@ -368,7 +368,6 @@ footer {
 
 .dob{
   border: 1px solid var(--capsule);
-  border-radius: 10px;
 }
 
 .btn_back:hover{
@@ -542,9 +541,7 @@ tr{
 
 
 .TopBtnresultPage button{
-  padding: 10px 20px;
   border-radius: 10px;
-  font-size: 14px;
   font-weight: 500;
 }
 
@@ -572,6 +569,7 @@ tr{
   #myButton{
     right: 5vw;
     top: 110px;
+
   }
   #v-pills-messages{
     padding: 0px ;
@@ -597,7 +595,7 @@ tr{
     overflow: scroll;
   }
   .form_reviwConfirm{
-    font-size: 14px;
+    font-size: 12px;
   }
   .card-wizard{
     height:79vh;
@@ -606,16 +604,85 @@ tr{
     border-radius: 5px;
   }
   .input_padd p{
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 500;
     color: var(--text);
   }
   #email::placeholder {
     font-size: 14px;
    }
-   
+   .dob_input::placeholder{
+    font-size: 14px;
+   }
+   #individualContent2 input::placeholder{
+    font-size: 14px;
+   }
+   #individualContent2 input{
+    padding: 8px;
+   }
+   #individualContent2 textarea::placeholder{
+    font-size: 14px;
+   }
    .btn_back{
     margin-right: 5px;
+   }
+   .dob_span{
+    padding: 9.375pt 0.75rem;
+   }
+   .dob_input{
+    padding-left: 0;
+   }
+   .dob_input input{
+    border-radius: 0 5px 5px 0;
+   }
+   #individualContent1 span{
+    border-radius: 5px 0 0 5px;
+   }
+   
+   #individualContent1 p{
+    font-size: 11px;
+   }
+   .dob{
+  border-radius: 5px;
+
+   }
+   .form-select{
+    border-radius: 5px;
+   }
+   .form-switch label {
+    font-size: 14px;
+   }
+   .matchrate, .form-check-label{
+    font-size: 14px;
+   }
+   .OR{
+    font-size: 14px;
+   }
+   #company_address{
+    border-radius: 5px;
+   }
+   #individualContent2 input{
+    border-radius: 5px;
+   }
+   #dropdownInput1 input{
+    border-radius: 5px;
+   }
+   .TopBtnresultPage button{
+    font-size: 11px;
+  padding: 5px 10px;
+
+   }
+   .TopBtnresultPage{
+    padding-top: 10px;
+   }
+   #accordionExample button{
+    font-size: 12px;
+   }
+   .accordion-row p{
+    font-size: 11px;
+   }
+   .formAccordings label, .formAccordings span{
+    font-size: 12px;
    }
 }
 
@@ -665,4 +732,32 @@ tr{
     padding: 16px;
     border-radius: 10px;
   }
+  #individualContent1 input{
+    border-radius: 0 10px 10px 0;
+   }
+   #individualContent1 span{
+    border-radius: 10px 0 0 10px;
+   }
+   .dob{
+    border-radius: 10px;
+  
+     }
+     .form-select{
+      border-radius: 10px;
+     }
+     #company_address{
+      border-radius: 10px;
+     }
+     #individualContent2 input{
+      border-radius: 10px;
+     }
+     #dropdownInput1 input{
+      border-radius: 10px;
+     }
+     #individualContent2 input{
+      padding: 16px;
+     }
+     .accordion-row p{
+      font-size: 14px;
+     }
 }
