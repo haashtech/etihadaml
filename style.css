@@ -58,7 +58,6 @@ section {
   height: 200px;
   width: 200px;
   position: relative;
-  margin: 0 30px 10px 0;
 }
 .pie::before {
   content: "";
@@ -561,3 +560,109 @@ tr{
 /* ----------------------------MEDIA QUERY start----------------------------- */
 
 
+/* Default styles for all devices */
+
+/* Styles for devices with a maximum width of 767px (phones) */
+@media (max-width: 767px) {
+  /* CSS rules for phones */
+  .textGreetings{
+    font-size: 14px;
+
+  }
+  #myButton{
+    right: 5vw;
+    top: 110px;
+  }
+  #v-pills-messages{
+    padding: 0px ;
+  }
+  .nav.nav-pills.nav-fill{
+    font-size: 11px;
+  }
+  .nav-link.tab-pills{
+    padding: 0;
+  }
+  .card-header{
+    padding: 15px 5px 15px 5px;
+  }
+  
+  .btn-wizard{
+    display: flex;
+  }
+  .btn-wizard button{
+    min-width: 100px;
+    font-size: 13px;
+  }
+  .main_container{
+    overflow: scroll;
+  }
+  .form_reviwConfirm{
+    font-size: 14px;
+  }
+  .card-wizard{
+    height:79vh;
+  }
+  .input_padd input{
+    border-radius: 5px;
+  }
+  .input_padd p{
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--text);
+  }
+  #email::placeholder {
+    font-size: 14px;
+   }
+   
+   .btn_back{
+    margin-right: 5px;
+   }
+}
+
+/* Styles for devices with a minimum width of 768px and a maximum width of 991px (tablets) */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* CSS rules for tablets */
+}
+
+/* Styles for devices with a minimum width of 992px and a maximum width of 1199px (small desktops) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* CSS rules for small desktops */
+}
+
+/* Styles for devices with a minimum width of 1200px (large desktops) */
+@media (min-width: 1200px) {
+  /* CSS rules for large desktops */
+  .pie {
+    height: 200px;
+    width: 200px;
+    position: relative;
+  }
+  .textGreetings{
+    font-size: 16px;
+
+  }
+  #myButton{
+    right: 3vw;
+    top: 100px;
+  }
+  #v-pills-messages{
+    padding: 40px ;
+  }
+  .card-wizard{
+    height: 76vh;
+  }
+  .btn-wizard button{
+    min-width: 150px;
+    font-size: 14px;
+  }
+  .main_container{
+    overflow: hidden;
+  }
+  .form_reviwConfirm{
+    font-size: 16px;
+  }
+  .input_padd input{
+    padding: 16px;
+    border-radius: 10px;
+  }
+}

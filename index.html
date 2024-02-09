@@ -42,6 +42,9 @@
   <script src="assets/js/plugins/jquery-3-6-0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
 
+
+
+  
 </head>
 
 <body>
@@ -318,7 +321,7 @@
                 
               </div>
             </div>
-          <button id="myButton" style="position: absolute;right: 90px;top: 100px; background-color: var(--orange);
+          <button id="myButton" style="position: absolute; background-color: var(--orange);
           border: none;
           padding: 15px 40px;
           border-radius: 5px;
@@ -342,11 +345,10 @@
                         Welcome
                         <span style="color: var(--orange)"><b>“ABIN”</b></span>
                       </h1>
-                      <p class="pt-xxl-5 pb-3" style="
+                      <p class="pt-xxl-5 pb-3 textGreetings" style="
                             font-weight: 500;
                             color: var(--text);
                             text-align: justify;
-                            font-size: 14px;
                           ">
                         <b>Greetings! We're glad to see you here.</b> The
                         Portal is a powerful platform that allows you to
@@ -564,13 +566,13 @@
                     </form>
                   </div>
                 </div>
-                <div  class="tab-pane fade myList px-5 container-fluid" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab"
+                <div  class="tab-pane fade myList container-fluid" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab"
                   tabindex="0">
                   <section class="row">
                     <div class="container p-0">
-                      <form class="card" style="width: auto;height: 76vh;" >
+                      <form class="card card-wizard" style="width: auto;" >
                         <div class="card-header" id="card-header" style="background-color: var(--capsule);">
-                          <nav class="nav nav-pills nav-fill">
+                          <nav class="nav nav-pills nav-fill" >
                             <a id="v-pills-wizard-tab" class="nav-link tab-pills" href="#"><span
                                 class="me-2 wizard_number"><b>1</b> </span> <b>Choose an action</b></a>
                             <a id="v-pills-wizard-tab" class="nav-link tab-pills" href="#"><span
@@ -581,8 +583,6 @@
                                 class="me-2 wizard_number"><b>4</b> </span><b>Additional session data</b></a>
                             <a id="v-pills-wizard-tab" class="nav-link tab-pills" href="#"><span
                                 class="me-2 wizard_number"><b>5</b> </span><b>Review and confirm</b></a>
-                                <!-- <a id="v-pills-wizard-tab" class="nav-link tab-pills" href="#"><span
-                                  class="me-2 wizard_number"><b>5</b> </span><b>aa</b></a> -->
                           </nav>
                         </div>
                         <div class="card-body" style="background-color: var(--gray);z-index: 0;overflow: hidden;">
@@ -604,20 +604,20 @@
                           </div>
 
                           <div id="tab-2" class="tab d-none">
-                            <div id="individualContent">
+                            <div id="individualContent" class="input_padd">
                               <div class="mb-3 mt-3">
                                 <!-- <label for="name" class="form-label">Address 1</label> -->
-                                <input style="border-radius: 10px;"  type="text" class="form-control p-3 " name="name" id="name"
-                                  placeholder="First Name (Requered) " />
+                                <input type="text" class="form-control" name="name" id="email" placeholder="First Name (Required)" />
+
                               </div>
                               <div class="mb-3">
                                 <!-- <label for="email" class="form-label">Address 2</label> -->
-                                <input style="border-radius: 10px;" type="email" class="form-control p-3 " name="email" id="email"
+                                <input  type="email" class="form-control" name="email" id="email"
                                   placeholder="Middle Name " />
                               </div>
                               <div >
                                 <!-- <label for="email" class="form-label">Address 2</label> -->
-                                <input style="border-radius: 10px;" type="email" class="form-control p-3 " name="email" id="email"
+                                <input  type="email" class="form-control" name="email" id="email"
                                   placeholder="Last Name (Requered)" />
                               </div>
                               <div class=" text-center py-3">
@@ -625,11 +625,11 @@
                               </div>
                               <div class="mb-3">
                                 <!-- <label for="email" class="form-label">Address 2</label> -->
-                                <input style="border-radius: 10px;" type="email" class="form-control p-3 " name="email" id="email"
+                                <input type="email" class="form-control" name="email" id="email"
                                   placeholder="Full Name (Requered) " />
                               </div>
                               <div>
-                                <p style="font-size: 14px; font-weight: 300;">
+                                <p >
                                   The person's full name in non-Latin script, or if separating based on First/Middle/Last name is not possible
                                 </p>
                               </div>
@@ -637,14 +637,14 @@
                             <div id="corporateContent" class="d-none">
                               <div class="mb-3 mt-3">
                                 <!-- <label for="name" class="form-label">Address 1</label> -->
-                                <input style="border-radius: 10px;"  type="text" class="form-control p-3 " name="name" id="name"
+                                <input style="border-radius: 10px;"  type="text" class="form-control " name="name" id="name"
                                   placeholder="Company name (required) " />
                               </div>
                             </div>
                             
                           </div>
                           <div id="tab-3" class="tab d-none">
-                            <div id="individualContent1">
+                            <div id="individualContent1" class="input_padd">
                               <div class="row pt-3">
                                 <div class="mb-3 col-md-6">
                                   <!-- <input style="border-radius: 10px;" type="text" class="form-control p-3" name="city" id="city"
@@ -681,13 +681,13 @@
                                 </div>
                               </div>
                               <div class="mb-3">
-                                <select class="form-control p-3" style="border-radius: 10px;" name="gender" id="gender" required>
+                                <select class="form-select p-3" style="border-radius: 10px;" name="gender" id="gender" required>
                                     <option value="" selected disabled>Gender</option>
                                     <option value="male">Male</option>
                                     <option value="female">Female</option>
                                     <option value="other">Other</option>
                                 </select>
-                              </div>
+                            </div>
                               <div class="d-flex py-3">
                                   <div class="form-check p-0">
                                   <input class="form-check-input1" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
@@ -777,12 +777,12 @@
                                 <textarea style="border-radius: 10px;" class="form-control p-3"  name="company_address" id="company_address" placeholder="Comment"></textarea>
                               </div>
                               <hr class="my-4">
-                              <div class="dropdown-container" style="width: 100%;">
-                                <input class="p-3" style="width: 100%;outline: none;border: solid 1px var(--capsule);border-radius: 10px;background-color: var(--white);" type="text" placeholder="Advanced Options" id="dropdownInput" readonly>
+                              <div class="dropdown-container">
+                                <input class="p-3" style="width: 100%; outline: none; border: solid 1px var(--capsule); border-radius: 10px; background-color: var(--white);" type="text" placeholder="Advanced Options" id="dropdownInput" readonly>
                                 <i class="fas fa-caret-down dropdown-icon"></i>
-                                <div class="dropdown-content" id="myDropdown" style="width: 100%;">
-                                  <input class="p-3" style="width: 100%;border: none; border-bottom: solid 1px var(--black);" type="text" placeholder="Relay state (optional) ">
-                                  <input class="p-3" style="width: 100%;border: none; border-bottom: solid 1px var(--black);" type="text" placeholder="Webhook target URL (optional)">
+                                <div class="dropdown-content" id="myDropdown">
+                                  <input class="p-3" style="width: 100%; border: none; border-bottom: solid 1px var(--black);" type="text" placeholder="Relay state (optional)">
+                                  <input class="p-3" style="width: 100%; border: none; border-bottom: solid 1px var(--black);" type="text" placeholder="Webhook target URL (optional)">
                                 </div>
                               </div>
                             </div>
@@ -810,93 +810,93 @@
                           <div id="tab-5" class="tab d-none">
                             <div id="individualContent3">
                               <div class="mb-3 mt-3">
-                                <form>
+                                <form class="form_reviwConfirm">
                                   <div class="form-group row">
-                                    <label for="firstName" class="col-sm-2 col-form-label">First Name</label>
+                                    <label for="firstName" class="col-sm-2 col col-form-label">First Name</label>
                                     <div class="col">
                                       <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
                                     </div>
                                   </div>
                                   <div class="form-group row">
-                                    <label for="lastName" class="col-sm-2 col-form-label">Last Name</label>
+                                    <label for="lastName" class="col-sm-2 col col-form-label">Last Name</label>
                                     <div class="col">
                                       <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
                                     </div>
                                   </div>
                                   <div class="form-group row">
-                                    <label for="lastName" class="col-sm-2 col-form-label">Middle Name</label>
+                                    <label for="lastName" class="col-sm-2 col col-form-label">Middle Name</label>
                                     <div class="col">
                                       <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
                                     </div>
                                   </div>
                                   <div class="form-group row">
-                                    <label for="lastName" class="col-sm-2 col-form-label">Full Name</label>
+                                    <label for="lastName" class="col-sm-2 col col-form-label">Full Name</label>
                                     <div class="col">
                                       <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
                                     </div>
                                   </div>
                                   <div class="form-group row">
-                                    <label for="lastName" class="col-sm-2 col-form-label">Country</label>
+                                    <label for="lastName" class="col-sm-2 col col-form-label">Country</label>
                                     <div class="col">
                                       <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
                                     </div>
                                   </div>
                                   <div class="form-group row">
-                                    <label for="lastName" class="col-sm-2 col-form-label">Date of Birth</label>
+                                    <label for="lastName" class="col-sm-2 col col-form-label">Date of Birth</label>
                                     <div class="col">
                                       <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
                                     </div>
                                   </div>
                                   <div class="form-group row">
-                                    <label for="lastName" class="col-sm-2 col-form-label">Gender</label>
+                                    <label for="lastName" class="col-sm-2 col col-form-label">Gender</label>
                                     <div class="col">
                                       <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
                                     </div>
                                   </div>
                                   <div class="form-group row">
-                                    <label for="lastName" class="col-sm-2 col-form-label">Match type</label>
+                                    <label for="lastName" class="col-sm-2 col col-form-label">Match type</label>
                                     <div class="col">
                                       <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
                                     </div>
                                   </div>
                                   <div class="form-group row">
-                                    <label for="lastName" class="col-sm-2 col-form-label">Match rate</label>
+                                    <label for="lastName" class="col-sm-2 col col-form-label">Match rate</label>
                                     <div class="col">
                                       <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
                                     </div>
                                   </div>
                                   <div class="form-group row">
-                                    <label for="lastName" class="col-sm-2 col-form-label">Exclude deceased persons</label>
+                                    <label for="lastName" class="col-sm-2 col col-form-label">Exclude deceased persons</label>
                                     <div class="col">
                                       <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
                                     </div>
                                   </div>
                                   <div class="form-group row">
-                                    <label for="includeResultEntities" class="col-sm-2 col-form-label">Include result entities</label>
+                                    <label for="includeResultEntities" class="col-sm-2 col col-form-label">Include result entities</label>
                                     <div class="col">
                                       <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
                                     </div>
                                   </div>
                                   <div class="form-group row">
-                                    <label for="comment" class="col-sm-2 col-form-label">Include web search</label>
+                                    <label for="comment" class="col-sm-2 col col-form-label">Include web search</label>
                                     <div class="col">
                                       <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
                                     </div>
                                   </div>
                                   <div class="form-group row">
-                                    <label for="comment" class="col-sm-2 col-form-label">Comment</label>
+                                    <label for="comment" class="col-sm-2 col col-form-label">Comment</label>
                                     <div class="col">
                                       <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
                                     </div>
                                   </div>
                                   <div class="form-group row">
-                                    <label for="comment" class="col-sm-2 col-form-label">Relay state</label>
+                                    <label for="comment" class="col-sm-2 col col-form-label">Relay state</label>
                                     <div class="col">
                                       <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
                                     </div>
                                   </div>
                                   <div class="form-group row">
-                                    <label for="comment" class="col-sm-2 col-form-label">Webhook URL</label>
+                                    <label for="comment" class="col-sm-2 col col-form-label">Webhook URL</label>
                                     <div class="col">
                                       <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
                                     </div>
@@ -906,57 +906,57 @@
                             </div>
                             <div id="corporateContent3" class="d-none">
                               <div class="mb-3 mt-3">
-                                <form>
+                                <form class="form_reviwConfirm">
                                   <div class="form-group row">
-                                    <label for="firstName" class="col-sm-2 col-form-label">Company Name</label>
+                                    <label for="firstName" class="col-sm-2 col col-form-label">Company Name</label>
                                     <div class="col">
                                       <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
                                     </div>
                                   </div>
                                   <div class="form-group row">
-                                    <label for="lastName" class="col-sm-2 col-form-label">Address</label>
+                                    <label for="lastName" class="col-sm-2 col col-form-label">Address</label>
                                     <div class="col">
                                       <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
                                     </div>
                                   </div>
                                   <div class="form-group row">
-                                    <label for="lastName" class="col-sm-2 col-form-label">Registration Number</label>
+                                    <label for="lastName" class="col-sm-2 col col-form-label">Registration Number</label>
                                     <div class="col">
                                       <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
                                     </div>
                                   </div>
                                   <div class="form-group row">
-                                    <label for="lastName" class="col-sm-2 col-form-label">Match type</label>
+                                    <label for="lastName" class="col-sm-2 col col-form-label">Match type</label>
                                     <div class="col">
                                       <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
                                     </div>
                                   </div>
                                   <div class="form-group row">
-                                    <label for="lastName" class="col-sm-2 col-form-label">Match rate</label>
+                                    <label for="lastName" class="col-sm-2 col col-form-label">Match rate</label>
                                     <div class="col">
                                       <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
                                     </div>
                                   </div>
                                   <div class="form-group row">
-                                    <label for="lastName" class="col-sm-2 col-form-label">Include Web search</label>
+                                    <label for="lastName" class="col-sm-2 col col-form-label">Include Web search</label>
                                     <div class="col">
                                       <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
                                     </div>
                                   </div>
                                   <div class="form-group row">
-                                    <label for="lastName" class="col-sm-2 col-form-label">Comment</label>
+                                    <label for="lastName" class="col-sm-2 col col-form-label">Comment</label>
                                     <div class="col">
                                       <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
                                     </div>
                                   </div>
                                   <div class="form-group row">
-                                    <label for="lastName" class="col-sm-2 col-form-label">Relay state</label>
+                                    <label for="lastName" class="col-sm-2 col col-form-label">Relay state</label>
                                     <div class="col">
                                       <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
                                     </div>
                                   </div>
                                   <div class="form-group row">
-                                    <label for="lastName" class="col-sm-2 col-form-label">Webhook URL</label>
+                                    <label for="lastName" class="col-sm-2 col col-form-label">Webhook URL</label>
                                     <div class="col">
                                       <span style="font-weight: 500;" class="form-control-plaintext">: (empty)</span>
                                     </div>
@@ -1280,11 +1280,11 @@
                           <button style="text-decoration: none;font-size: 14px;" type="button" id="back_button" class="btn btn-link" >
                             Cancel
                           </button>
-                          <div>
-                            <button style="box-shadow: none; z-index: 1; font-weight: 500; text-decoration: none;color: var(--white);width: 150px;border-radius: 10px;font-size: 14px;" type="button" id="back1_button" class="btn btn-link py-3 btn_back" onclick="back()">
+                          <div class="btn-wizard">
+                            <button style="box-shadow: none; z-index: 1; font-weight: 500; text-decoration: none;color: var(--white);border-radius: 10px;" type="button" id="back1_button" class="btn btn-link py-3 btn_back" onclick="back()">
                               BACK<span class="iconamoon--arrow-right-2-duotone"></span>
                             </button>
-                            <button  style="box-shadow: none; font-weight: 500; color: var(--white);text-decoration: none;min-width: 150px;border-radius: 10px;font-size: 14px;" type="button" id="next_button" class="btn ms-auto py-3 btn_continue" onclick="next()">
+                            <button  style="box-shadow: none; font-weight: 500; color: var(--white);text-decoration: none;border-radius: 10px;" type="button" id="next_button" class="btn ms-auto py-3 btn_continue" onclick="next()">
                               CONTINUE
                             </button>
                           </div>
@@ -1563,43 +1563,49 @@
   </div>
 
   <!-- <script src="assets/js/plugins/bootstrap.min.js"></script> -->
-  <script src="assets/js/plugins/swiper.bundle.js"></script>
-  <script src="assets/js/plugins/owl.carousel.min.js"></script>
-  <script src="assets/js/plugins/jquery-modal-video.min.js"></script>
-  <script src="assets/js/plugins/fontawesome.js"></script>
-  <script src="assets/js/plugins/counter.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="assets/js/plugins/jquery.nice-select.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
-  <script src="assets/js/plugins/jquery.lineProgressbar.js"></script>
-  <script src="assets/js/plugins/isotope.pkgd.min.js"></script>
-  <script src="assets/js/plugins/propper.min.js"></script>
-  <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/js/plugins/tippy.js"></script>
-  <script src="assets/js/plugins/jquery.nice-select.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-  <script src="assets/js/plugins/mobilemenu.js"></script>
-   <script src="assets/js/main.js"></script>
+  <!-- Bootstrap CSS -->
 
+<!-- Your other plugins/scripts -->
+<script src="assets/js/plugins/swiper.bundle.js"></script>
+<script src="assets/js/plugins/owl.carousel.min.js"></script>
+<script src="assets/js/plugins/jquery-modal-video.min.js"></script>
+<script src="assets/js/plugins/fontawesome.js"></script>
+<script src="assets/js/plugins/counter.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="assets/js/plugins/jquery.nice-select.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+<script src="assets/js/plugins/jquery.lineProgressbar.js"></script>
+<script src="assets/js/plugins/isotope.pkgd.min.js"></script>
+<script src="assets/js/plugins/propper.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"></script>
+<script src="assets/js/plugins/tippy.js"></script>
+<script src="assets/js/plugins/jquery.nice-select.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="mobilemenu.js"></script>
 
-
-
-  <!-- ------------------------------------------------ -->
-  <script src="mobilemenu.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="style.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/css/bootstrap-datepicker.min.css">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/js/bootstrap-datepicker.min.js"></script>
+<!-- Bootstrap JS Bundle (including Popper) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- ----table -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Your other scripts -->
+<script src="style.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/css/bootstrap-datepicker.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/js/bootstrap-datepicker.min.js"></script>
+
+<!-- Bootstrap JS Bundle (including Popper) - You've included this again, but it's already included above -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script> -->
+
+<!-- Bootstrap Table -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.0/bootstrap-table.js"></script>
 <script src="//rawgit.com/hhurz/tableExport.jquery.plugin/master/tableExport.js"></script>
+
+<!-- Your main script -->
+<script src="assets/js/main.js"></script>
+
 
 </body>
 
