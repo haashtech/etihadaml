@@ -586,3 +586,7 @@ document.getElementById('back_button').addEventListener('click', function() {
   // Reload the page
   window.location.reload();
 });
+
+
+
+

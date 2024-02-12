@@ -546,6 +546,7 @@ tr{
 .TopBtnresultPage button{
   border-radius: 10px;
   font-weight: 500;
+  padding: 10px 20px;
 }
 
 
@@ -565,6 +566,11 @@ tr{
 /* Styles for devices with a maximum width of 767px (phones) */
 @media (max-width: 767px) {
   /* CSS rules for phones */
+  .card-footer{
+    position:sticky;
+    width: 100%;
+    bottom: 0;
+  }
   .textGreetings{
     font-size: 14px;
 
@@ -572,7 +578,7 @@ tr{
   #myButton{
     right: 5vw;
     top: 110px;
-
+    font-size: 14px;
   }
   #v-pills-messages{
     padding: 0px ;
@@ -601,7 +607,7 @@ tr{
     font-size: 12px;
   }
   .card-wizard{
-    height:79vh;
+    min-height:79vh;
   }
   .input_padd input{
     border-radius: 5px;
@@ -717,6 +723,12 @@ tr{
   .sidebarmain{
     display: none;
   }
+  #drpdown_notification{
+    font-size: 12px;
+  }
+  #dropdown_checkHistory{
+    font-size: 12px;
+  }
 }
 
 /* Styles for devices with a minimum width of 768px and a maximum width of 991px (tablets) */
@@ -726,8 +738,21 @@ tr{
     display: none;
   }
   #myButton{
-    right: 105vw;
+    right: 1vw;
     top: 110px;
+    font-size: 14px;
+  }
+  .nav.nav-pills.nav-fill{
+    font-size: 12px;
+  }
+  #drpdown_notification{
+    font-size: 12px;
+  }
+  #dropdown_checkHistory{
+    font-size: 12px;
+  }
+  .card-wizard{
+    height: 76vh;
   }
 }
 
@@ -740,6 +765,34 @@ tr{
   #myButton{
     right: 5vw;
     top: 100px;
+  }
+  .nav.nav-pills.nav-fill{
+    font-size: 15px;
+  }
+  .svgResult svg{
+    height: 10px;
+    width: auto;
+    padding: 0;
+  }
+  .accordion-button div:nth-child(1) {
+    /* Your styles here */
+    padding-right: 20px;
+  }
+  .accordion-button div:nth-child(2) {
+    /* Your styles here */
+    padding-right: 20px;
+  }
+  .main_container{
+    overflow: hidden;
+  }
+  #drpdown_notification{
+    font-size: 13px;
+  }
+  #dropdown_checkHistory{
+    font-size: 13px;
+  }
+  .card-wizard{
+    height: 76vh;
   }
 }
 
