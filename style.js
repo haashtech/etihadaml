@@ -280,86 +280,60 @@ function back() {
     const tab3 = document.getElementById('btn_profile_tab');
     const myButton = document.getElementById('myButton');
 
-    // Initially hide the button
-    // button.style.display = 'block';
-
-    // Variable to track the current active tab
+    
     let currentActiveTab = null;
 
-    // Add click event listener to Hide Button Tab
     hideButtonTab.addEventListener('click', function(event) {
-      // Hide the button when in Hide Button Tab
       button.style.display = 'none';
-      // Stop the event from propagating to the body click event
       event.stopPropagation();
-      // Update the current active tab
       currentActiveTab = hideButtonTab;
     });
     hideButtonTab1.addEventListener('click', function(event) {
-      // Hide the button when in Hide Button Tab
       button.style.display = 'none';
-      // Stop the event from propagating to the body click event
       event.stopPropagation();
-      // Update the current active tab
       currentActiveTab = hideButtonTab;
     });
-
     myButton.addEventListener('click', function(event) {
-      // Hide the button when in Hide Button Tab
       button.style.display = 'none';
-      // Stop the event from propagating to the body click event
       event.stopPropagation();
-      // Update the current active tab
       currentActiveTab = hideButtonTab;
     });
-
-
-    // Add click event listener to Tab 2
     tab2.addEventListener('click', function() {
-      // Show the button when in Tab 2 and not in Hide Button Tab
       if (currentActiveTab !== hideButtonTab) {
         button.style.display = 'block';
       }
-      // Update the current active tab
       currentActiveTab = tab2;
     });
 
     tab3.addEventListener('click', function() {
-      // Show the button when in Tab 2 and not in Hide Button Tab
       if (currentActiveTab !== hideButtonTab) {
         button.style.display = 'block';
       }
-      // Update the current active tab
-      currentActiveTab = tab2;
+      currentActiveTab = tab3; // Update to tab3
     });
+    
 
     listButtonTab1.addEventListener('click', function() {
-      // Show the button when in Tab 2 and not in Hide Button Tab
       if (currentActiveTab !== hideButtonTab) {
         button.style.display = 'block';
       }
-      // Update the current active tab
-      currentActiveTab = tab2;
+      currentActiveTab = listButtonTab1; // Update to listButtonTab1
     });
-
+    
     listButtonTab2.addEventListener('click', function() {
-      // Show the button when in Tab 2 and not in Hide Button Tab
       if (currentActiveTab !== hideButtonTab) {
         button.style.display = 'block';
       }
-      // Update the current active tab
-      currentActiveTab = tab2;
+      currentActiveTab = listButtonTab2; // Update to listButtonTab2
     });
+    
 
-    // Add click event listener to the body
     document.body.addEventListener('click', function(event) {
-      // Show the button when clicking anywhere else and not in Hide Button Tab
-      if (event.target !== hideButtonTab && currentActiveTab !== hideButtonTab) {
+      if (event.target !== hideButtonTab && event.target !== tab2 && event.target !== tab3 && event.target !== listButtonTab1 && event.target !== listButtonTab2) {
         button.style.display = 'block';
       } 
-      // Update the current active tab
-      // currentActiveTab = null;
     });
+    
   });
 
 
@@ -586,7 +560,21 @@ document.getElementById('back_button').addEventListener('click', function() {
   // Reload the page
   window.location.reload();
 });
+document.getElementById('logout').addEventListener('click', function() {
+  // Reload the page
+  window.location.reload();
+});
 
 
 
 
+
+var vpillsHomeTab=document.getElementById("v-pills-home-tab");
+var vpillsHomeTab1=document.getElementById("v-pills-home-tab1");
+
+vpillsHomeTab.addEventListener('click', function() {
+  vpillsHomeTab1.classList.remove('active');
+});
+vpillsHomeTab1.addEventListener('click', function() {
+  vpillsHomeTab.classList.remove('active');
+});

@@ -210,17 +210,14 @@ footer {
   border-radius: 0;
   box-sizing: border-box;
   border: none;
-  /* border-bottom: 3px solid var(--orange); */
   box-shadow: none;
   outline: none;
-  /* background-color: transparent; */
   background-color: rgb(72, 72, 72);
-
 }
+
 
 .pep:hover{
   background-color: rgb(72, 72, 72);
-
 }
 
 #v-pills-wizard-tab.active {
@@ -555,7 +552,16 @@ tr{
   border-radius: 16px;
 }
 
-
+.logout{
+  position: absolute;
+  bottom: 6vh;
+  left: 3vh;
+}
+.logout a{
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--capsule);
+}
 
 
 /* ----------------------------MEDIA QUERY start----------------------------- */
@@ -794,6 +800,11 @@ tr{
   .card-wizard{
     height: 76vh;
   }
+  .btn_sidebar button{
+    font-size: 12px;
+  }
+ 
+  
 }
 
 /* Styles for devices with a minimum width of 1200px (large desktops) */
