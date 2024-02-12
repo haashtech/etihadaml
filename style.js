@@ -453,13 +453,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 var dropdown = document.getElementById("myDropdown");
-var input = document.getElementById("dropdownInput1");
+var input = document.getElementById("dropdownInput");
 
 document.addEventListener("click", function(event) {
   if (!event.target.closest('.dropdown-container')) {
     dropdown.style.display = 'none';
   }
 });
+
 
 input.addEventListener("click", function(event) {
   event.stopPropagation();
@@ -581,3 +582,7 @@ function switchToTab(tabId) {
 
 
 
+document.getElementById('back_button').addEventListener('click', function() {
+  // Reload the page
+  window.location.reload();
+});

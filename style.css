@@ -341,7 +341,10 @@ footer {
 #dropdownInput::placeholder {
  font-weight: 600;
 }
-
+#dropdownInput1::placeholder {
+  font-weight: 600;
+ }
+ 
 
 .completed {
   color: green; /* Change the color to your desired color */
@@ -589,7 +592,7 @@ tr{
   }
   .btn-wizard button{
     min-width: 100px;
-    font-size: 13px;
+    font-size: 12px;
   }
   .main_container{
     overflow: scroll;
@@ -611,18 +614,31 @@ tr{
   #email::placeholder {
     font-size: 14px;
    }
+   #name::placeholder {
+    font-size: 14px;
+   }
    .dob_input::placeholder{
     font-size: 14px;
    }
    #individualContent2 input::placeholder{
     font-size: 14px;
    }
+   #corporateContent2 input::placeholder{
+    font-size: 14px;
+   }
    #individualContent2 input{
+    padding: 8px;
+   }
+   #corporateContent2 input{
     padding: 8px;
    }
    #individualContent2 textarea::placeholder{
     font-size: 14px;
    }
+   #corporateContent2 textarea::placeholder{
+    font-size: 14px;
+   }
+   
    .btn_back{
     margin-right: 5px;
    }
@@ -684,29 +700,63 @@ tr{
    .formAccordings label, .formAccordings span{
     font-size: 12px;
    }
+   #gender :nth-child(1n) {
+    /* Your styles here */
+    font-size: 12px;
+  }
+  .svgResult svg{
+    height: 10px;
+    width: auto;
+    padding: 0;
+  }
+  
+  .accordion-button div:nth-child(1) {
+    /* Your styles here */
+    padding-right: 20px;
+  }
+  .sidebarmain{
+    display: none;
+  }
 }
 
 /* Styles for devices with a minimum width of 768px and a maximum width of 991px (tablets) */
 @media (min-width: 768px) and (max-width: 991px) {
   /* CSS rules for tablets */
+  .sidebarmain{
+    display: none;
+  }
+  #myButton{
+    right: 105vw;
+    top: 110px;
+  }
 }
 
 /* Styles for devices with a minimum width of 992px and a maximum width of 1199px (small desktops) */
 @media (min-width: 992px) and (max-width: 1199px) {
   /* CSS rules for small desktops */
+  .sidebarmain{
+    display: block;
+  }
+  #myButton{
+    right: 5vw;
+    top: 100px;
+  }
 }
 
 /* Styles for devices with a minimum width of 1200px (large desktops) */
 @media (min-width: 1200px) {
   /* CSS rules for large desktops */
+  
+  .sidebarmain{
+    display: block;
+  }
   .pie {
     height: 200px;
     width: 200px;
     position: relative;
   }
   .textGreetings{
-    font-size: 16px;
-
+    font-size: 18px;
   }
   #myButton{
     right: 3vw;
@@ -760,4 +810,17 @@ tr{
      .accordion-row p{
       font-size: 14px;
      }
+     .svgResult svg{
+      height: 15px;
+      width: auto;
+      padding: 0;
+    }
+    .accordion-button div:nth-child(1) {
+      /* Your styles here */
+      padding-right: 50px;
+    }
+    .accordion-button div:nth-child(2) {
+      /* Your styles here */
+      padding-right: 50px;
+    }
 }
