@@ -1,79 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Step Wizard Example</title>
-  <style>
-    .hidden {
-      display: none;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Your Page Title</title>
+    
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
 
-<button id="startButton">Start Step Wizard</button>
-
-<div id="step1" class="step">Step 1: Pill 1</div>
-<div id="step2" class="step hidden">Step 2: Pill 2</div>
-<div id="step3" class="step hidden">Step 3: Pill 3</div>
-<div id="step4" class="step hidden">Step 4: Pill 4</div>
-<div id="step5" class="step hidden">Step 5: Pill 5</div>
-
-<button id="prevButton" class="hidden">Previous</button>
-<button id="nextButton" class="hidden">Next</button>
-
-<script>
-  var currentCondition = 1;
-  var totalConditions = 5; // Adjust this based on the total number of steps
-
-  document.getElementById('startButton').addEventListener('click', function() {
-    resetWizard();
-  });
-
-  document.getElementById('nextButton').addEventListener('click', function() {
-    navigateStep('next');
-  });
-
-  document.getElementById('prevButton').addEventListener('click', function() {
-    navigateStep('prev');
-  });
-
-  function resetWizard() {
-    currentCondition = 1;
-    updateButtons();
-    showStep(currentCondition);
-  }
-
-  function navigateStep(direction) {
-    if (direction === 'next' && currentCondition < totalConditions) {
-      currentCondition++;
-    } else if (direction === 'prev' && currentCondition > 1) {
-      currentCondition--;
-    }
-
-    updateButtons();
-    showStep(currentCondition);
-  }
-
-  function updateButtons() {
-    document.getElementById('prevButton').classList.toggle('hidden', currentCondition === 1);
-    document.getElementById('nextButton').classList.toggle('hidden', currentCondition === totalConditions);
-  }
-
-  function showStep(condition) {
-    // Hide all steps
-    document.querySelectorAll('.step').forEach(function(step) {
-      step.classList.add('hidden');
-    });
-
-    // Show the current step
-    var currentStep = document.getElementById('step' + condition);
-    if (currentStep) {
-      currentStep.classList.remove('hidden');
-    }
-  }
-</script>
+    <div class="form-check form-switch">
+        <input style="border-radius: 50px;" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" required checked>
+        <label style="font-weight: 600;" class="form-check-label" for="flexSwitchCheckDefault">Include result entities</label>
+        <p>Include full profile information of all matched entities. Default: Yes</p>
+      </div>
+<!-- Bootstrap JS and Popper.js CDN (for Bootstrap functionality) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>

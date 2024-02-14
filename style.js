@@ -106,7 +106,7 @@ function loadFormData(n) {
 
   $(tabsPill[n]).addClass("active").addClass("completed");
   $(tabs[n]).removeClass("d-none");
-  $("#back_button").attr("disabled", n === 0 ? true : false);
+  // $("#back_button").attr("disabled", n === 0 ? true : false);
 
   if (n+2 === tabs.length) {
     // Change text to "SEND REQUEST" without changing the background color
@@ -196,7 +196,7 @@ function back() {
   }
 
   // Disable the back button if the current tab is 0
-  $("#back_button").attr("disabled", current === 0);
+  // $("#back_button").attr("disabled", current === 0);
 }
 
 
@@ -206,153 +206,60 @@ function back() {
 
 
 
-
-  // document.addEventListener('DOMContentLoaded', function() {
-  //   // const button = document.getElementById('myButton');
-  //   const button = document.querySelectorAll('#myButton');
-  //   // const list = document.getElementById('myList');
-  //   const list = document.querySelectorAll('.myList');
-  //   let buttonHidden = false;
-
-  //   // Add click event listener to the list
-  //   list.addEventListener('click', function(event) {
-  //     // Hide the button only if it's not already hidden
-  //     if (!buttonHidden) {
-  //       button.style.display = 'none';
-  //       buttonHidden = true;
-  //     }
-  //     // Stop the event from propagating to the document
-  //     event.stopPropagation();
-  //   });
-
-  //   // Add click event listener to the document
-  //   document.addEventListener('click', function() {
-  //     // Show the button only if it's currently hidden
-  //     if (buttonHidden) {
-  //       button.style.display = 'block';
-  //       buttonHidden = false;
-  //     }
-  //   });
-  // });
-
-
-  // document.addEventListener('DOMContentLoaded', function() {
-  //   const buttons = document.querySelectorAll('#myButton');
-  //   const lists = document.querySelectorAll('.myList');
-  //   let buttonHidden = false;
-
-  //   // Add click event listener to each list
-  //   lists.forEach(function(list) {
-  //     list.addEventListener('click', function(event) {
-  //       // Hide the button only if it's not already hidden
-  //       if (!buttonHidden) {
-  //         buttons.forEach(function(button) {
-  //           button.style.display = 'none';
-  //         });
-  //         buttonHidden = true;
-  //       }
-  //       // Stop the event from propagating to the document
-  //       event.stopPropagation();
-  //     });
-  //   });
-
-  //   // Add click event listener to the document
-  //   document.addEventListener('click', function() {
-  //     // Show the button only if it's currently hidden
-  //     if (buttonHidden) {
-  //       buttons.forEach(function(button) {
-  //         button.style.display = 'block';
-  //       });
-  //       buttonHidden = false;
-  //     }
-  //   });
-  // });
-
-  
-
-  document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
     const button = document.getElementById('myButton');
-    const hideButtonTab = document.getElementById('hide_btn_tab');
-    const hideButtonTab1 = document.getElementById('hide_btn_tab1');
-    const listButtonTab1 = document.getElementById('list_btn_tab1');
-    const listButtonTab2 = document.getElementById('list_btn_tab2');
-    const tab2 = document.getElementById('btn_dashboard_tab');
-    const tab3 = document.getElementById('btn_profile_tab');
-    const myButton = document.getElementById('myButton');
+    const hideButtonTabs = document.querySelectorAll('.meeem'); // Adjust the selector based on your actual HTML structure
+    const hideButtonTab = document.querySelector('.btnremove');
 
-    
-    let currentActiveTab = null;
+    hideButtonTab.addEventListener('click', function() {
+        button.style.display = 'none';
+    });
+   
 
-    hideButtonTab.addEventListener('click', function(event) {
+    button.addEventListener('click', function() {
       button.style.display = 'none';
-      event.stopPropagation();
-      currentActiveTab = hideButtonTab;
-    });
-    hideButtonTab1.addEventListener('click', function(event) {
-      button.style.display = 'none';
-      event.stopPropagation();
-      currentActiveTab = hideButtonTab;
-    });
-    myButton.addEventListener('click', function(event) {
-      button.style.display = 'none';
-      event.stopPropagation();
-      currentActiveTab = hideButtonTab;
-    });
-    tab2.addEventListener('click', function() {
-      if (currentActiveTab !== hideButtonTab) {
-        button.style.display = 'block';
-      }
-      currentActiveTab = tab2;
-    });
-
-    tab3.addEventListener('click', function() {
-      if (currentActiveTab !== hideButtonTab) {
-        button.style.display = 'block';
-      }
-      currentActiveTab = tab3; // Update to tab3
-    });
-    
-
-    listButtonTab1.addEventListener('click', function() {
-      if (currentActiveTab !== hideButtonTab) {
-        button.style.display = 'block';
-      }
-      currentActiveTab = listButtonTab1; // Update to listButtonTab1
-    });
-    
-    listButtonTab2.addEventListener('click', function() {
-      if (currentActiveTab !== hideButtonTab) {
-        button.style.display = 'block';
-      }
-      currentActiveTab = listButtonTab2; // Update to listButtonTab2
-    });
-    
-
-    document.body.addEventListener('click', function(event) {
-      if (event.target !== hideButtonTab && event.target !== tab2 && event.target !== tab3 && event.target !== listButtonTab1 && event.target !== listButtonTab2) {
-        button.style.display = 'block';
-      } 
-    });
-    
   });
+
+    hideButtonTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            button.style.display = 'block';
+        });
+    });
+    hideButtonTab.forEach(tab => {
+      hideButtonTab.addEventListener('click', function() {
+          button.style.display = 'none';
+      });
+  });
+});
+
+
 
 
 
   // individual_corporate check
 
-  
-        const checkboxes = document.querySelectorAll('.form-check-input');
-      
-        checkboxes.forEach((checkbox) => {
-          checkbox.addEventListener('change', function () {
-            checkboxes.forEach((otherCheckbox) => {
-              if (otherCheckbox !== checkbox) {
-                otherCheckbox.checked = false;
-              }
-            });
-          });
+  document.addEventListener('DOMContentLoaded', function() {
+    const checkboxes = document.querySelectorAll('.form-check-input4');
+
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', function() {
+            if (this.checked) {
+                // Uncheck other checkboxes
+                checkboxes.forEach(otherCheckbox => {
+                    if (otherCheckbox !== this) {
+                        otherCheckbox.checked = false;
+                    }
+                });
+            } else {
+                // Prevent unchecking if no other checkbox is checked
+                const atLeastOneChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
+                if (!atLeastOneChecked) {
+                    this.checked = true;
+                }
+            }
         });
-     
+    });
+});
 
 
 // ranger start
@@ -364,7 +271,6 @@ document.addEventListener('DOMContentLoaded', function() {
   var selector = '[data-rangeslider]';
   var element = document.querySelector(selector);
   var textContent = ('textContent' in document) ? 'textContent' : 'innerText';
- 
 
   function valueOutput(element) {
     var value = element.value;
@@ -408,21 +314,9 @@ document.addEventListener('DOMContentLoaded', function() {
       this.output.innerHTML = value;
     }
   });
-
- 
 });
 
 
-
-// const range = document.querySelector('#range');
-// range.addEventListener('input', function () {
-//     const bg = getComputedStyle(this).getPropertyValue('--white');
-//     const slider = getComputedStyle(this).getPropertyValue('--slider');
-//     range.setAttribute(
-//         'style',
-//         `background:linear-gradient(to right,${slider},${slider} ${this.value}%,${bg} ${this.value}%) `
-//     )
-// })
 
 
 
@@ -459,9 +353,8 @@ input1.addEventListener("click", function(event) {
 
 $(document).ready(function () {
   $('#datepicker1').datepicker({
-    format: 'mm/dd',
-    viewMode: "days",
-    minViewMode: "days",
+    format: 'mm/dd/yy',
+    
     autoclose: true,
   });
 });
@@ -485,9 +378,48 @@ document.getElementById('myButton').addEventListener('click', function() {
 
 
 
-
-function filterTable() {
+function filterTable(filterValue) {
   // Add your filter logic here
+  var table, tr, td, i, txtValue;
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  var matchesFound = false; // Flag to check if any matches are found
+
+  for (i = 0; i < tr.length; i++) {
+      var found = false; // Flag to check if the filter value is found in any column
+      for (var j = 0; j < tr[i].cells.length; j++) {
+          td = tr[i].cells[j];
+          if (td) {
+              txtValue = td.textContent || td.innerText;
+              // Check if the filter value matches the text content
+              if (filterValue === 'All' || txtValue.toUpperCase().indexOf(filterValue.toUpperCase()) > -1) {
+                  found = true;
+                  matchesFound = true;
+                  break; // Stop checking other cells in the row if a match is found
+              }
+          }
+      }
+      if (found) {
+          tr[i].style.display = "";
+      } else {
+          tr[i].style.display = "none";
+      }
+  }
+
+  // Display a message when no matches are found or the filter is empty
+  var emptyMessage = document.getElementById("emptyMessage");
+  if (!matchesFound || filterValue.trim() === '') {
+      emptyMessage.style.display = "block";
+  } else {
+      emptyMessage.style.display = "none";
+  }
+}
+
+  
+
+var searchInput = document.getElementById('searchInput');
+searchInput.addEventListener('input', function() {
   var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("searchInput");
   filter = input.value.toUpperCase();
@@ -495,7 +427,7 @@ function filterTable() {
   tr = table.getElementsByTagName("tr");
 
   for (i = 0; i < tr.length; i++) {
-      td = tr[i].getElementsByTagName("td")[0]; // Change the index to match the column you want to search
+      td = tr[i].getElementsByTagName("td")[1]; // Change the index to match the column you want to search
       if (td) {
           txtValue = td.textContent || td.innerText;
           if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -505,9 +437,7 @@ function filterTable() {
           }
       }
   }
-}
-
-
+});
 
 
 
@@ -568,13 +498,43 @@ document.getElementById('logout').addEventListener('click', function() {
 
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  const radioButtons = document.querySelectorAll('.form-check-input1');
+  const rangeSelector = document.querySelector('input[name="progress_value[]"]');
+  const outputaa = document.getElementById('outputaa');
 
-var vpillsHomeTab=document.getElementById("v-pills-home-tab");
-var vpillsHomeTab1=document.getElementById("v-pills-home-tab1");
+  radioButtons.forEach(radioButton => {
+      radioButton.addEventListener('change', function() {
+          handleMatchTypeChange(this);
+      });
+  });
 
-vpillsHomeTab.addEventListener('click', function() {
-  vpillsHomeTab1.classList.remove('active');
+  function handleMatchTypeChange(radio) {
+      if (radio.id === 'flexRadioDefault1') {
+          rangeSelector.disabled = true;
+          abc = rangeSelector.value = 100;
+          outputaa.innerHTML = abc;
+      } else {
+          rangeSelector.disabled = false;
+          dfg = rangeSelector.value = 80;
+          outputaa.innerHTML = dfg;
+      }
+  }
 });
-vpillsHomeTab1.addEventListener('click', function() {
-  vpillsHomeTab.classList.remove('active');
-});
+
+function handleMatchTypeChange1(radio) {
+  var rangeSelector1 = document.querySelector('input[name="progress_value1[]"]');
+  var outputaa1 = document.getElementById('outputaa1');
+  if (radio.id === 'flexRadioDefault3') {
+    rangeSelector1.disabled = true;
+    aaa=rangeSelector1.value = 100;
+    outputaa1.innerHTML=aaa
+  } else {
+    rangeSelector1.disabled = false;
+    ccc=rangeSelector1.value = 80;
+    outputaa1.innerHTML=ccc
+
+  }
+}
+
+

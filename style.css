@@ -28,7 +28,18 @@ padding: 0;
     background-color: var(--black);
 }
 
+ /* Override Bootstrap styles for the range input */
+ body input[type="range"][data-rangeSlider] {
+  background-color: #e0e0e0;
+}
 
+body input[type="range"][data-rangeSlider]::-webkit-slider-thumb {
+  background-color: #001639 !important;
+}
+
+body input[type="range"][data-rangeSlider]::-moz-range-thumb {
+  background-color: #42f47a !important;
+}
 
 
 
@@ -41,6 +52,9 @@ padding: 0;
   from {
     transform: rotate(0deg) translate3d(0, 0, 0);
   }
+}
+.form-check.form-switch input[type="checkbox"] {
+  border-radius: 0.25rem;  /* Adjust the value as needed */
 }
 
 main {
@@ -71,16 +85,7 @@ section {
   top: 50px;
   left: 50px;
 }
-/* .pie::after {
-  content: "";
-  display: block;
-  width: 120px;
-  height: 2px;
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  box-shadow: 0 0 3px 4px rgba(0, 0, 0, 0.1);
-  margin: 220px auto;
-} */
+
 .slice {
   position: absolute;
   width: 200px;
@@ -150,11 +155,7 @@ footer {
 
 
 
-/* Style the scrollbar track */
-/* ::-webkit-scrollbar {
-    width: 7px; 
-  }
-   */
+
   /* Style the scrollbar handle */
   ::-webkit-scrollbar-thumb {
     background-color: var(--text); /* Set the color of the scrollbar handle */
@@ -164,13 +165,6 @@ footer {
   /* Style the scrollbar track on hover */
   ::-webkit-scrollbar-track:hover {
     background-color: var(--capsule); /* Set the color of the scrollbar track on hover */
-  }
-  
-  .btn_tab button:hover{
-    color: var(--orange);
-  }
-  .btn_tab button:active{
-    color: var(--orange);
   }
 
 
@@ -195,30 +189,29 @@ footer {
   border-left: 0.3em solid transparent;
 }
 
-#home-tab.active {
-    color: var(--orange);
-    border-radius: 0;
-    box-sizing: border-box;
-    border: none;
-    border-bottom: 3px solid var(--orange);
-    box-shadow: none;
-    outline: none;
-    background-color: transparent;
-}
-#v-pills-home-tab.active {
+
+.nav-link.active.btn_dashnews {
   color: var(--orange);
+  background-color: transparent;
   border-radius: 0;
   box-sizing: border-box;
   border: none;
+  border-bottom: 3px solid var(--orange);
   box-shadow: none;
   outline: none;
-  background-color: rgb(72, 72, 72);
+}
+#drpdown_notification .nav-link.active {
+  color: var(--orange);
+  background-color: transparent;
+  border-radius: 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 3px solid var(--orange);
+  box-shadow: none;
+  outline: none;
 }
 
 
-.pep:hover{
-  background-color: rgb(72, 72, 72);
-}
 
 #v-pills-wizard-tab.active {
   color: var(--black);
@@ -264,7 +257,7 @@ footer {
 }
 .btn_sidebar button:hover{
   color: var(--white);
-  background-color: rgb(72, 72, 72);
+  background-color: rgb(42, 42, 42);
 
 }
 .btn_sidebar button li a{
@@ -277,7 +270,15 @@ footer {
 .nav-link{
   color: var(--navlink);
 }
-
+#v-pills-home-tab.active {
+  color: var(--orange);
+  border-radius: 0;
+  box-sizing: border-box;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  background-color: rgb(72, 72, 72);
+}
 
 
 .wizard_number{
@@ -376,22 +377,7 @@ footer {
   background-color: var(--black);
 }
 
-/* #range {
- 
-  --slider: rgb(255, 77, 0);
-  background: var(--white);
-  -webkit-appearance: none;
-} */
 
-#range {
-  --slider: rgb(255, 77, 0);
-  background: linear-gradient(to right, var(--slider), var(--slider) 80%, var(--white) 80%);
-  -webkit-appearance: none;
-  width: 100%;
-  border-radius: 50px;
-}
-
-/* Styles for wrapping the search box */
 
 .main {
   width: 50%;
@@ -430,13 +416,6 @@ footer {
 }
 
 
-
-/* #myButton {
-  position:static  !important;
-  right: 50px !important;
-  top: 100px !important;
-  /* Other styles */
-/* } */ 
 
 /* Add drop shadow to an element with class "example" */
 .has-search input{
@@ -560,7 +539,7 @@ tr{
 .logout a{
   text-decoration: none;
   font-weight: 600;
-  color: var(--capsule);
+  color: var(--text);
 }
 
 
@@ -583,8 +562,8 @@ tr{
   }
   #myButton{
     right: 5vw;
-    top: 110px;
-    font-size: 14px;
+    top: 115px;
+    font-size: 13px;
   }
   #v-pills-messages{
     padding: 0px ;
@@ -730,11 +709,38 @@ tr{
     display: none;
   }
   #drpdown_notification{
-    font-size: 12px;
+    font-size: 14px;
   }
   #dropdown_checkHistory{
     font-size: 12px;
   }
+  .review{
+    font-size: 10px;
+  }
+  .review_c{
+    font-size: 10px;
+  }
+  .table-row{
+    font-size: 10px;
+  }
+  #searchInput::placeholder {
+    font-size: 13px;
+   }
+   .or_area{
+    font-size: 12px;
+   }
+   .dashboard_tab{
+    font-size: 14px;
+   }
+   .dashboard_dropdown ul li a{
+    font-size: 12px;
+   }
+   #v-pills-tab{
+    font-size: 15px;
+   }
+   #v-pills-profile{
+    font-size: 14px;
+   }
 }
 
 /* Styles for devices with a minimum width of 768px and a maximum width of 991px (tablets) */
@@ -759,6 +765,10 @@ tr{
   }
   .card-wizard{
     height: 76vh;
+  }
+  .btn-wizard button{
+    min-width: 100px;
+    font-size: 12px;
   }
 }
 
@@ -801,10 +811,13 @@ tr{
     height: 76vh;
   }
   .btn_sidebar button{
-    font-size: 12px;
+    font-size: 14px;
   }
  
-  
+  .btn-wizard button{
+    min-width: 100px;
+    font-size: 14px;
+  }
 }
 
 /* Styles for devices with a minimum width of 1200px (large desktops) */
@@ -845,6 +858,9 @@ tr{
   .input_padd input{
     padding: 16px;
     border-radius: 10px;
+  }
+  #flexSwitchCheckDefault1{
+    padding: 0;
   }
   #individualContent1 input{
     border-radius: 0 10px 10px 0;
@@ -888,3 +904,43 @@ tr{
       padding-right: 50px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
+
+  
