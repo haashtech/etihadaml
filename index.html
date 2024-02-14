@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,14 +19,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="mobile.css">
 <!-- ------------------------------------------------------------------ -->
-        <!-- <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css"> -->
-        <!-- <link rel="stylesheet" href="assets/css/plugins/swiper.bundle.css"> -->
+       
         <link rel="stylesheet" href="assets/css/plugins/font-awesome-pro.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-        <!-- <link rel="stylesheet" href="assets/css/plugins/nice-select.css"> -->
-        <!-- <link rel="stylesheet" href="assets/css/plugins/owl.carousel.min.css"> -->
-        <!-- <link rel="stylesheet" href="assets/css/plugins/modal-video.min.css"> -->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,7 +30,6 @@
         <link rel="stylesheet" href="assets/css/plugins/mobile.css">
         <link rel="stylesheet" href="assets/css/plugins/aos.css">
         <link rel="stylesheet" href="assets/css/typography.css">
-        <!-- <link rel="stylesheet" href="assets/css/master.css"> -->
         <link rel="stylesheet" href="assets/css/plugins/responsive.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-ZrlQRuE4jFZtDIWuo7o4IaaqoCVyuCIJKGOA9orNxMbW41l2qF2JIm0X6lqYMZQl" crossorigin="anonymous">
 
@@ -56,7 +52,7 @@
       <div class="row vh-100 " style="position: relative;">
 
         <!-- mobile_header -->
-  <div class="mobile-header mobile-header-4 d-block d-lg-none homepagesmall" style="background-color: var(--gray);">
+  <div class="mobile-header mobile-header-4 d-block d-lg-none homepagesmall" style="background-color:rgba(237, 237, 237, 0.978);backdrop-filter: blur(10px);">
     <div class="container-fluid">
       <div class="col-12" >
         <div class="mobile-header-elements" >
@@ -83,92 +79,70 @@
     </div>
     
 
-                      <div style="width: 100%;" class="nav flex-column mt-5 pt-5 nav-pills btn_sidebar" id="v-pills-tab"
-                        role="tablist" aria-orientation="vertical">
-                        <hr class="m-0">
-                        <button  class="nav-link active align-items-center d-flex py-4 pe-0 m-0 menu-close5"
-                          id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button"
-                          role="tab" aria-controls="v-pills-home" aria-selected="true">
-                          <div id="btn_dashboard_tab" class=" " style="
-                                display: flex;
-                                align-items: center;
-                                /* justify-content: center; */
-                              ">
-                            <iconify-icon class="pe-3" icon="radix-icons:dashboard"></iconify-icon>
-                            Dashboard
-                          </div>
-                        </button>
-                        <hr class="m-0">
-                        <button class="nav-link align-items-center d-flex py-4 pe-0 menu-close4" id="v-pills-home-tab" data-bs-toggle="pill"
-                          data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
-                          aria-selected="false">
-                          <div id="btn_profile_tab " >
-                            <iconify-icon class="pe-3" icon="healthicons:ui-user-profile"></iconify-icon>
-                            Profile
-                          </div>
-                        </button>
-                        <hr class="m-0">
-                        <button id="v-pills-home-tab" class="nav-link align-items-center d-flex py-0 pe-0 ps-0 ">
-                          <ul class="nav navbar-nav nav-link p-0" style="width: 100%;">
-                            <li class="dropdown">
-                              <a style="
-                                    text-decoration: none;
-                                    display: flex;
-                                    /* align-items: center; */
-                                    text-align: left;
-                                    width: 100%;
-                                  " href="#" class="dropdown-toggle" data-toggle="dropdown">
-                               <div class="d-flex py-3 ps-3 container-fluid">
-                                <iconify-icon class="pe-3" icon="iconamoon:file-check-light"></iconify-icon>
-                                <p class="m-0">
-                                  PEP, Sanction & <br> Adverse Media Check
-                                </p>
-                               </div>
-                               <!-- <iconify-icon icon="gridicons:dropdown"></iconify-icon> -->
-                              </a>
-                              <ul id="tabmain" style="
-                                    line-height: 40px;
-                                    background-color: rgb(43, 43, 43);
-                                  " class="dropdown-menu py-3 mt-3 ul_dropdown ">
-                                <li class="myList menu-close1" id="hide_btn_tab1">
-                                  <div id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages"
-                                    type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false"
-                                    class="d-flex align-items-center ps-4" style="
-                                        text-decoration: none;
-                                        font-weight: 500;
-                                      " href="#">
-                                    <iconify-icon class="pe-2" icon="ic:round-plus"></iconify-icon>New Check
-                                  </div>
-                                </li>
+    <div style="width: 100%;" class="nav flex-column mt-5 pt-5 nav-pills btn_sidebar" id="v-pills-tab"
+    role="tablist" aria-orientation="vertical">
+    <hr class="m-0">
+    <button  class="meeem nav-link active align-items-center d-flex py-4 pe-0 m-0 menu-close5"
+      id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button"
+      role="tab" aria-controls="v-pills-home" aria-selected="true">
+      <div id="btn_dashboard_tab" class=" " style="
+            display: flex;
+            align-items: center;
+            /* justify-content: center; */
+          ">
+        <iconify-icon class="pe-3" icon="radix-icons:dashboard"></iconify-icon>
+        Dashboard
+      </div>
+    </button>
+    <hr class="m-0">
+    <button class="meeem nav-link align-items-center d-flex py-4 pe-0 menu-close4" id="v-pills-home-tab" data-bs-toggle="pill"
+      data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
+      aria-selected="false">
+      <div id="btn_profile_tab " >
+        <iconify-icon class="pe-3" icon="healthicons:ui-user-profile"></iconify-icon>
+        Profile
+      </div>
+    </button>
+    <hr class="m-0">
+       
+            <button class="btnremove1 menu-close1 nav-link align-items-center d-flex py-4 pe-0 " id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages">
+              <div 
+                type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false"
+                class="d-flex align-items-center" style="
+                    text-decoration: none;
+                    font-weight: 500;
+                  " href="#">
+                <iconify-icon class="pe-3" icon="ic:round-plus"></iconify-icon>New Check
+              </div>
+            </button>
+            <hr class="m-0">
 
-                                <li id="list_btn_tab1" class="menu-close2">
-                                  <div data-bs-toggle="pill" data-bs-target="#v-pills-checkHistory" type="button" role="tab"
-                                    aria-controls="v-pills-profile" aria-selected="false" id="v-pills-home-tab"
-                                    class="d-flex align-items-center ps-4" style="
-                                        text-decoration: none;
-                                        font-weight: 500;
-                                      " href="#">
-                                    <iconify-icon class="pe-2"
-                                      icon="material-symbols:history-rounded"></iconify-icon>Check History
-                                  </div>
-                                </li>
-                                <li id="list_btn_tab2" class="menu-close3">
-                                  <div data-bs-toggle="pill" data-bs-target="#v-pills-notifications" type="button" role="tab"
-                                    aria-controls="v-pills-profile" aria-selected="false" id="v-pills-home-tab"
-                                    class="d-flex align-items-center ps-4" style="
-                                        text-decoration: none;
-                                        font-weight: 500;
-                                      " href="#">
-                                    <iconify-icon class="pe-2" icon="mi:notification"></iconify-icon>Notifications
-                                  </div>
-                                </li>
-                              </ul>
-                            </li>
-                          </ul>
-                        </button>
-                        <hr class="m-0">
-                      </div>
-    <div class="col logout" id="logout" style="bottom: 0;">
+            <button  class="meeem menu-close2 nav-link align-items-center d-flex py-4 pe-0" data-bs-toggle="pill" data-bs-target="#v-pills-checkHistory" type="button" role="tab"
+            aria-controls="v-pills-profile" aria-selected="false" id="v-pills-home-tab">
+              <div 
+                class="d-flex align-items-center" style="
+                    text-decoration: none;
+                    font-weight: 500;
+                  " href="#">
+                <iconify-icon class="pe-3"
+                  icon="material-symbols:history-rounded"></iconify-icon>Check History
+              </div>
+            </button>
+    <hr class="m-0">
+
+            <button  class="meeem menu-close3 nav-link align-items-center d-flex py-4 pe-0" data-bs-toggle="pill" data-bs-target="#v-pills-notifications" type="button" role="tab"
+            aria-controls="v-pills-profile" aria-selected="false" id="v-pills-home-tab">
+              <div 
+                class="d-flex align-items-center" style="
+                    text-decoration: none;
+                    font-weight: 500;
+                  " href="#">
+                <iconify-icon class="pe-3" icon="mi:notification"></iconify-icon>Notifications
+              </div>
+            </button>
+    <hr class="m-0">
+  </div>
+    <div class="col logout" id="logout" style="bottom: 25px;">
       <a href="#">
         <img src="/images/icons/logout_icon.svg" alt="">
         logout
@@ -187,10 +161,10 @@
                 <div class="p-0 m-0">
                   <div class="text-white py-4">
                     <div style="width: 100%;" class="d-flex align-items-start ">
-                      <div style="width: 100%;" class="nav flex-column nav-pills btn_sidebar" id="v-pills-tab"
+                      <div style="width: 100%;" class="nav flex-column mt-5 pt-5 nav-pills btn_sidebar" id="v-pills-tab1"
                         role="tablist" aria-orientation="vertical">
                         <hr class="m-0">
-                        <button  class="nav-link active align-items-center d-flex py-4 pe-0 m-0"
+                        <button  class="meeem nav-link active align-items-center d-flex py-4 pe-0 m-0 menu-close5"
                           id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button"
                           role="tab" aria-controls="v-pills-home" aria-selected="true">
                           <div id="btn_dashboard_tab" class=" " style="
@@ -203,80 +177,54 @@
                           </div>
                         </button>
                         <hr class="m-0">
-                        <button class="nav-link align-items-center d-flex py-4 pe-0" id="v-pills-home-tab" data-bs-toggle="pill"
+                        <button class="meeem nav-link align-items-center d-flex py-4 pe-0 menu-close4" id="v-pills-home-tab" data-bs-toggle="pill"
                           data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
                           aria-selected="false">
-                          <div id="btn_profile_tab" >
+                          <div id="btn_profile_tab " >
                             <iconify-icon class="pe-3" icon="healthicons:ui-user-profile"></iconify-icon>
                             Profile
                           </div>
                         </button>
                         <hr class="m-0">
-                        <button id="v-pills-home-tab" class="nav-link align-items-center d-flex py-0 pe-0 ps-0">
-                          <ul class="nav navbar-nav nav-link p-0" style="width: 100%;">
-                            <li class="dropdown">
-                              <a style="
-                                    text-decoration: none;
-                                    display: flex;
-                                    /* align-items: center; */
-                                    text-align: left;
-                                    width: 100%;
-                                  " href="#" class="dropdown-toggle" data-toggle="dropdown">
-                               <div class="d-flex py-3 ps-3 container-fluid">
-                                <iconify-icon class="pe-3" icon="iconamoon:file-check-light"></iconify-icon>
-                                <p class="m-0">
-                                  PEP, Sanction & <br> Adverse Media Check
-                                </p>
-                               </div>
-                               <!-- <iconify-icon icon="gridicons:dropdown"></iconify-icon> -->
-                              </b>
-                              </a>
-                              <ul id="tabmain" style="
-                                    line-height: 40px;
-                                    background-color: rgb(43, 43, 43);
-                                  " class="dropdown-menu py-3 mt-3 ul_dropdown ">
-                                <li class="myList" id="hide_btn_tab">
-                                  <div id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages"
+                           
+                                <button class="btnremove menu-close1 nav-link align-items-center d-flex py-4 pe-0 " id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages">
+                                  <div 
                                     type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false"
-                                    class="d-flex align-items-center ps-4" style="
+                                    class="d-flex align-items-center" style="
                                         text-decoration: none;
                                         font-weight: 500;
-                                        font-size: 15px;  
                                       " href="#">
-                                    <iconify-icon class="pe-2" icon="ic:round-plus"></iconify-icon>New Check
+                                    <iconify-icon class="pe-3" icon="ic:round-plus"></iconify-icon>New Check
                                   </div>
-                                </li>
+                                </button>
+                                <hr class="m-0">
 
-                                <li id="list_btn_tab1">
-                                  <div data-bs-toggle="pill" data-bs-target="#v-pills-checkHistory" type="button" role="tab"
-                                    aria-controls="v-pills-profile" aria-selected="false" id="v-pills-home-tab"
-                                    class="d-flex align-items-center ps-4" style="
+                                <button  class="meeem menu-close2 nav-link align-items-center d-flex py-4 pe-0" data-bs-toggle="pill" data-bs-target="#v-pills-checkHistory" type="button" role="tab"
+                                aria-controls="v-pills-profile" aria-selected="false" id="v-pills-home-tab">
+                                  <div 
+                                    class="d-flex align-items-center" style="
                                         text-decoration: none;
                                         font-weight: 500;
-                                        font-size: 15px;
                                       " href="#">
-                                    <iconify-icon class="pe-2"
+                                    <iconify-icon class="pe-3"
                                       icon="material-symbols:history-rounded"></iconify-icon>Check History
                                   </div>
-                                </li>
-                                <li id="list_btn_tab2">
-                                  <div data-bs-toggle="pill" data-bs-target="#v-pills-notifications" type="button" role="tab"
-                                    aria-controls="v-pills-profile" aria-selected="false" id="v-pills-home-tab"
-                                    class="d-flex align-items-center ps-4" style="
+                                </button>
+                        <hr class="m-0">
+
+                                <button  class="meeem menu-close3 nav-link align-items-center d-flex py-4 pe-0" data-bs-toggle="pill" data-bs-target="#v-pills-notifications" type="button" role="tab"
+                                aria-controls="v-pills-profile" aria-selected="false" id="v-pills-home-tab">
+                                  <div 
+                                    class="d-flex align-items-center" style="
                                         text-decoration: none;
                                         font-weight: 500;
-                                        font-size: 15px;
                                       " href="#">
-                                    <iconify-icon class="pe-2" icon="mi:notification"></iconify-icon>Notifications
+                                    <iconify-icon class="pe-3" icon="mi:notification"></iconify-icon>Notifications
                                   </div>
-                                </li>
-                              </ul>
-                            </li>
-                          </ul>
-                        </button>
+                                </button>
                         <hr class="m-0">
                       </div>
-                      <div class="col logout" id="logout" style="bottom: 0;">
+                      <div class="col logout" id="logout" style="bottom: 25px;">
                         <a href="#">
                           <img src="/images/icons/logout_icon.svg" alt="">
                           logout
@@ -333,7 +281,7 @@
           border-radius: 5px;
           font-weight: 600;
           width: fit-content;
-          color: var(--white);" class="btn btn-primary" id="myButton" onclick="switchToTab('v-pills-messages')">NEW CHECK
+          color: var(--white);" class="btn btn-primary" onclick="switchToTab('v-pills-messages')">NEW CHECK
           </button>
 
               <div class="tab-content p-3 " id="v-pills-tabContent">
@@ -369,29 +317,27 @@
                             border-radius: 20px;
                             background-color: var(--gray);
                           " class="p-4 border">
-                        <div class="d-flex justify-content-end">
+                        <div class="d-flex justify-content-end dashboard_dropdown" >
                           <div class="dropdown">
-                            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown"
-                              aria-expanded="false">
-                              Period
+                            <button class="btn me-1 btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                Period
                             </button>
-                            <ul class="dropdown-menu">
-                              <li>
-                                <a class="dropdown-item" href="#">Action</a>
-                              </li>
-                              <li>
-                                <a class="dropdown-item" href="#">Another action</a>
-                              </li>
-                              <li>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                              </li>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
                           </div>
+                        
                           <div class="dropdown">
                             <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown"
                               aria-expanded="false">
                               <iconify-icon icon="ci:hamburger-md"></iconify-icon>
                             </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <li><a class="dropdown-item" href="#">Download PNG</a></li>
+                              <li><a class="dropdown-item" href="#">Download JPEG</a></li>
+                          </ul>
                           </div>
                         </div>
                         <div class="container-fluid">
@@ -423,7 +369,7 @@
                       </div>
                     </div>
                     <div class="col-lg-6 p-xxl-5 ps-xxl-0 pb-xxl-0 pt-0 mt-3">
-                      <div style="
+                      <div class="dashboard_tab" style="
                             background-color: var(--gray);
                             border-radius: 20px;
                             max-height: 100%;
@@ -432,14 +378,14 @@
                         <div class="pt-4 px-4" style="background-color: var(--capsule)">
                           <ul style="border: none" class="nav nav-tabs btn_tab pb-2" id="myTab" role="tablist">
                             <li class="nav-item" role="presentation">
-                              <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                              <button class="nav-link active btn_dashnews" id="home-tab1" data-bs-toggle="tab"
                                 data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
                                 aria-selected="true">
                                 News
                               </button>
                             </li>
                             <li class="nav-item" role="presentation">
-                              <button class="nav-link" id="home-tab" data-bs-toggle="tab"
+                              <button class="nav-link btn_dashnews" id="home-tab4" data-bs-toggle="tab"
                                 data-bs-target="#profile-tab-pane" type="button" role="tab"
                                 aria-controls="profile-tab-pane" aria-selected="false">
                                 Updates
@@ -595,13 +541,13 @@
                           <div id="tab-1" class="tab d-none pt-3 ps-3" style="flex-direction: column;height: 100%;display: flex;align-items:flex-start;justify-content: center;">
                          
                             <div class="form-check">
-                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                              <input class="form-check-input4" type="checkbox" value="individual" id="flexCheckDefault">
                               <label class="form-check-label" for="flexCheckDefault">
                                 Individual
                               </label>
                             </div>
                             <div class="form-check">
-                              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                              <input class="form-check-input4" type="checkbox" value="corporate" id="flexCheckChecked" checked>
                               <label class="form-check-label" for="flexCheckChecked">
                                 Corporate
                               </label>
@@ -643,7 +589,7 @@
                           <div id="tab-3" class="tab d-none">
                             <div id="individualContent1">
                               <div class="row pt-lg-3 pt-sm-0">
-                                <div class="mb-3 col-md-6">
+                                <div class="mb-3 col-md-5">
                                     <form class="row">
                                       <div class="col">
                                           <div class="input-group date dob" id="datepicker1">
@@ -655,9 +601,12 @@
                                               <input style="border-left: none; box-shadow: none;" type="text" class="form-control p-lg-3 p-sm-2 ps-lg-2 dob_input" id="date" placeholder="Date of birth(mm/dd/yyyy)" />
                                           </div>
                                       </div>
-                                  </form>
+                                    </form>
                                 </div>
-                                <div class="mb-3 col-md-6">
+                                <div class="col-md-2 d-flex justify-content-center align-items-center pb-3 or_area" style="font-weight: 600;" >
+                                  OR
+                                </div>
+                                <div class="mb-3 col-md-5">
                                   <form class="row">
                                     <div class="col">
                                         <div class="input-group date dob" id="datepicker2">
@@ -681,33 +630,32 @@
                                     <option value="other">Other</option>
                                 </select>
                             </div>
-                              <div class="d-flex py-lg-3 py-sm-0">
-                                  <div class="form-check p-0">
-                                  <input class="form-check-input1" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                  <label class="form-check-label" for="flexRadioDefault1">
-                                    Exact match
-                                  </label>
-                                  </div>
-                                  <div class="form-check form-check-inline">
-                                    <input class="form-check-input1" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                    <label class="form-check-label" for="flexRadioDefault2">
-                                      Close match
-                                    </label>
-                                  </div>
-                              </div>
+                            <div class="d-flex py-lg-3 py-sm-0">
+                              <div class="form-check p-0">
+                                <input class="form-check-input1" type="radio" name="flexRadioDefault" id="flexRadioDefault1" onchange="handleMatchTypeChange(this)">
+                                <label class="form-check-label" for="flexRadioDefault1">Exact match</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input1" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked onchange="handleMatchTypeChange(this)">
+                                <label class="form-check-label" for="flexRadioDefault2">Close match</label>
+                            </div>
+                          </div>
+                          
                               <div class="py-3">
-                                <span class="matchrate" style="font-weight: 600;">Match rate :</span><output>80</output>
-                              <input style="width: 100%;" type="range" min="0" max="100" value="80" name="progress_value[]" data-rangeSlider>
+                                <span class="matchrate" style="font-weight: 600;">Match rate :</span><output id="outputaa">80</output>
+                                <input style="width: 100%;" type="range" min="0" max="100" value="80" name="progress_value[]" data-rangeSlider>
                               <p style="font-weight: 300px;">
                                 Indicates how closely the name being checked matches the name on the matching watchlist profile, with 1 being not close and 100 being very close
                               </p>
                                 
                               </div>
                               <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" checked>
-                                <label style="font-weight: 600;" class="form-check-label" for="flexSwitchCheckDefault">Include result entities</label>
-                                <p>Include full profile information of all matched entities. Default: Yes</p>
-                            </div>
+                                <input class="form-check-input" style="border-radius: 50px;" type="checkbox" id="flexSwitchCheckDefault2t_padd" required checked>
+                                <label class="form-check-label" for="flexSwitchCheckDefault2">Include result entities</label>
+                                <div class="form-text">
+                                    Include full profile information of all matched entities. Default: Yes
+                                </div>
+                              </div>
                             
                             </div>
                             <div id="corporateContent1" class="d-none input_padd">
@@ -720,35 +668,33 @@
                                   placeholder="Registration number " />
                               </div>
                               <div class="d-flex py-lg-3 py-sm-0">
-                                  <div class="form-check p-0">
-                                  <input class="form-check-input1" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                  <label class="form-check-label" for="flexRadioDefault1">
-                                    Exact match
-                                  </label>
-                                  </div>
-                                  <div class="form-check form-check-inline">
-                                    <input class="form-check-input1" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                    <label class="form-check-label" for="flexRadioDefault2">
-                                      Close match
-                                    </label>
-                                  </div>
+                                <div class="form-check p-0">
+                                  <input class="form-check-input1" type="radio" name="flexRadioDefault" id="flexRadioDefault3" onchange="handleMatchTypeChange1(this)">
+                                  <label class="form-check-label" for="flexRadioDefault1">Exact match</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                  <input class="form-check-input1" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked onchange="handleMatchTypeChange1(this)">
+                                  <label class="form-check-label" for="flexRadioDefault2">Close match</label>
+                              </div>
                               </div>
                             
+                            
                               <div class="py-3">
-                                <span class="matchrate" style="font-weight: 600;">Match rate :</span><output>80</output>
-                              <input style="width: 100%;" type="range" min="0" max="100" value="80" name="progress_value[]" data-rangeSlider>
-                              <p style="font-weight: 300px;">
+                                <span class="matchrate" style="font-weight: 600;">Match rate :</span><output id="outputaa1">80</output>
+                                <input style="width: 100%;" type="range" min="0" max="100" value="80" name="progress_value1[]" data-rangeSlider>
+                                <p style="font-weight: 300px;">
                                 Indicates how closely the name being checked matches the name on the matching watchlist profile, with 1 being not close and 100 being very close
-                              </p>
-                                
+                                </p>
+                              
                               </div>
                               <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault1">
-                                <label style="font-weight: 600;" class="form-check-label " for="flexSwitchCheckDefault1">Include result entities</label>
-                                <p>Include full profile information of all matched entities. Default: Yes
-  
-                                </p>
+                                <input class="form-check-input" style="border-radius: 50px;" type="checkbox" id="flexSwitchCheckDefault1" required checked>
+                                <label class="form-check-label" for="flexSwitchCheckDefault1">Include result entities</label>
+                                <div class="form-text">
+                                    Include full profile information of all matched entities. Default: Yes
+                                </div>
                               </div>
+                            
                             </div>
                             
                           </div>
@@ -1297,31 +1243,42 @@
                     <div style="
                           background-color: var(--white);
                           max-height: 100%;
-                          overflow: hidden;
                         ">
-
+<div class="search-filter-row pb-3 " style="position: sticky;top: 0;">
+  <div class="form-group has-search search-box">
+    <span class="fa fa-search form-control-feedback"></span>
+    <input  type="text" id="searchInput" class="form-control p-3 ps-5" placeholder="Search by Name">
+  </div>
+  <!-- <div class="search-box">
+      <i class="search-icon fas fa-search"></i>
+      <input type="text" id="searchInput" placeholder="Search...">
+  </div> -->
+  <div class="dropdown">
+    <button class="filter-button d-flex px-4 py-3 align-items-center ms-3">
+      <i class="fas fa-filter pe-2"></i> <div>Filter</div>
+    </button>
+    <div class="dropdown-content">
+      <!-- Add your filter values as options -->
+      <a href="#" onclick="filterTable('Finalized')">Finalized</a>
+      <a href="#" onclick="filterTable('To review')">To review</a>
+      <a href="#" onclick="filterTable('Declined')">Declined</a>
+      <a href="#" onclick="filterTable('Approved')">Approved</a>
+      <a href="#" onclick="filterTable('Individual')">Individual</a>
+      <a href="#" onclick="filterTable('Corporate')">Corporate</a>
+      <!-- Add more values as needed -->
+  </div>
+  </div>
+</div>
                       <div style="
                             height:73vh;
                             overflow: auto;
-                            overflow-x: hidden;
                             padding-bottom: 60px;
                           " class="tab-content pt-1 px-2" id="myTabContent">
+                          
                         <div class="tab-pane fade show active row g-2 " id="home-tab-pane1" role="tabpanel"
                           aria-labelledby="home-tab" tabindex="0">
-                          <div class="search-filter-row pb-3" style="position: sticky;top: 0;">
-                            <div class="form-group has-search search-box">
-                              <span class="fa fa-search form-control-feedback"></span>
-                              <input type="text" id="searchInput" class="form-control p-3 ps-5" placeholder="Search">
-                            </div>
-                            <!-- <div class="search-box">
-                                <i class="search-icon fas fa-search"></i>
-                                <input type="text" id="searchInput" placeholder="Search...">
-                            </div> -->
-                            <button class="filter-button d-flex px-4 py-3 align-items-center ms-3" onclick="filterTable()">
-                                <i class="fas fa-filter pe-2"></i> <div>Filter</div>
-                            </button>
-                          </div>
-                    
+                          
+                          
                         <table id="myTable">
                             <thead>
                                 <tr class="table-head">
@@ -1333,8 +1290,9 @@
                                 </tr>
                             </thead>
                             <tbody >
+                              
                                 <tr class="table-row" >
-                                    <td style="padding-left: 20px;"><span class="review py-2 px-3">To Review</span></td>
+                                    <td "><span class="review py-2 px-3">To Review</span></td>
                                     <td><span style="font-weight: 600;">Mohanlal</span> <br>
                                       613d9a74-ed67-45e0-96cd-7824c7b6155a</td>
                                     <td>Individual</td>
@@ -1343,8 +1301,8 @@
                                     </td>
                                 </tr>
                                 <tr class="table-row">
-                                  <td style="padding-left: 20px;"><span class="review_c py-2 px-3">Finalized</span></td>
-                                  <td><span style="font-weight: 600;">Mohanlal</span> <br>
+                                  <td ><span class="review_c py-2 px-3">Finalized</span></td>
+                                  <td><span style="font-weight: 600;">babu</span> <br>
                                     613d9a74-ed67-45e0-96cd-7824c7b6155a</td>
                                   <td>Individual</td>
                                   <td>2024-01-18 06:37:31</td>
@@ -1352,7 +1310,7 @@
                                   </td>
                               </tr>
                               <tr class="table-row">
-                                <td style="padding-left: 20px;"><span class="review py-2 px-3">To Review</span></td>
+                                <td ><span class="review py-2 px-3">To Review</span></td>
                                 <td><span style="font-weight: 600;">Mohanlal</span> <br>
                                   613d9a74-ed67-45e0-96cd-7824c7b6155a</td>
                                 <td>Individual</td>
@@ -1361,16 +1319,16 @@
                                 </td>
                             </tr>
                             <tr class="table-row">
-                              <td style="padding-left: 20px;"><span class="review py-2 px-3">To Review</span></td>
+                              <td ><span class="review py-2 px-3">To Review</span></td>
                               <td><span style="font-weight: 600;">Mohanlal</span> <br>
                                 613d9a74-ed67-45e0-96cd-7824c7b6155a</td>
-                              <td>Individual</td>
+                              <td>Corporate</td>
                               <td>2024-01-18 06:37:31</td>
                               <td>2024-01-18 06:37:43
                               </td>
                           </tr>
                           <tr class="table-row">
-                            <td style="padding-left: 20px;"><span class="review_c py-2 px-3">Finalized</span></td>
+                            <td><span class="review_c py-2 px-3">Finalized</span></td>
                             <td><span style="font-weight: 600;">Mohanlal</span> <br>
                               613d9a74-ed67-45e0-96cd-7824c7b6155a</td>
                             <td>Individual</td>
@@ -1379,16 +1337,16 @@
                             </td>
                         </tr>
                         <tr class="table-row">
-                          <td style="padding-left: 20px;"><span class="review_c py-2 px-3">Finalized</span></td>
+                          <td ><span class="review_c py-2 px-3">Finalized</span></td>
                           <td><span style="font-weight: 600;">Mohanlal</span> <br>
                             613d9a74-ed67-45e0-96cd-7824c7b6155a</td>
-                          <td>Individual</td>
+                          <td>Corporate</td>
                           <td>2024-01-18 06:37:31</td>
                           <td>2024-01-18 06:37:43
                           </td>
                       </tr>
                       <tr class="table-row">
-                        <td style="padding-left: 20px;"><span class="review_c py-2 px-3">Finalized</span></td>
+                        <td><span class="review_c py-2 px-3">Finalized</span></td>
                         <td><span style="font-weight: 600;">Mohanlal</span> <br>
                           613d9a74-ed67-45e0-96cd-7824c7b6155a</td>
                         <td>Individual</td>
@@ -1397,7 +1355,7 @@
                         </td>
                     </tr> 
                     <tr class="table-row">
-                      <td style="padding-left: 20px;"><span class="review_c py-2 px-3">Finalized</span></td>
+                      <td ><span class="review_c py-2 px-3">Finalized</span></td>
                       <td><span style="font-weight: 600;">Mohanlal</span> <br>
                         613d9a74-ed67-45e0-96cd-7824c7b6155a</td>
                       <td>Individual</td>
@@ -1406,10 +1364,10 @@
                       </td>
                   </tr>
                   <tr class="table-row">
-                    <td style="padding-left: 20px;"><span class="review_c py-2 px-3">Finalized</span></td>
+                    <td ><span class="review_c py-2 px-3">Finalized</span></td>
                     <td><span style="font-weight: 600;">Mohanlal</span> <br>
                       613d9a74-ed67-45e0-96cd-7824c7b6155a</td>
-                    <td>Individual</td>
+                    <td>Corporate</td>
                     <td>2024-01-18 06:37:31</td>
                     <td>2024-01-18 06:37:43
                     </td>
@@ -1417,6 +1375,9 @@
                                 <!-- Add more rows as needed -->
                             </tbody>
                         </table>
+                        <div id="emptyMessage" style="display: none; color: var(--text); font-weight: bold; text-align: center; margin-top: 10px;">
+                          No data found
+                      </div>
                       </div>
                     </div>
                     </div>
@@ -1430,115 +1391,100 @@
 
 <!-- end -->
 
-                <div class="tab-pane fade mt-5" id="v-pills-notifications" role="tabpanel" aria-labelledby="v-pills-settings-tab"
-                  tabindex="0">
-                  <div class="col-sm-12 p-lg-5 p-sm-0 pb-0 pt-5">
-                    <div id="drpdown_notification" style="
-                          background-color: var(--gray);
-                          border-radius: 20px;
-                          max-height: 100%;
-                          overflow: hidden;
-                        ">
-                      <div class="pt-4 px-4" style="background-color: var(--capsule)">
-                        <ul style="border: none" class="nav nav-tabs btn_tab pb-2" id="myTab" role="tablist">
-                          <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
-                              data-bs-target="#home-tab-pane1" type="button" role="tab" aria-controls="home-tab-pane"
-                              aria-selected="true">
-                              News
-                            </button>
-                          </li>
-                          <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="home-tab" data-bs-toggle="tab"
-                              data-bs-target="#profile-tab-pane1" type="button" role="tab"
-                              aria-controls="profile-tab-pane" aria-selected="false">
-                              Updates
-                            </button>
-                          </li>
-                        </ul>
-                      </div>
+<div class="tab-pane fade mt-5" id="v-pills-notifications" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">
+  <div class="col-sm-12 p-lg-5 p-sm-0 pb-0 pt-5">
+      <div id="drpdown_notification" style="
+          background-color: var(--gray);
+          border-radius: 20px;
+          max-height: 100%;
+          overflow: hidden;
+      ">
+          <div class="pt-4 px-4" style="background-color: var(--capsule)">
+              <ul style="border: none" class="nav nav-tabs btn_tab pb-2" id="myTab" role="tablist">
+                  <li class="nav-item active" role="presentation">
+                      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane2" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
+                          News
+                      </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane1" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">
+                          Updates
+                      </button>
+                  </li>
+              </ul>
+          </div>
 
-                      <div style="
-                            height:65vh;
-                            overflow: auto;
-                            overflow-x: hidden;
-                            padding-bottom: 60px;
-                          " class="tab-content pt-3 px-4" id="myTabContent">
-                        <div class="tab-pane fade show active row g-2 capsules" id="home-tab-pane1" role="tabpanel"
-                          aria-labelledby="home-tab" tabindex="0">
-                          <section class="row g-2">
-                            <div>
-                              hac sem sem erat vivamus rhoncus. Est eget at
-                              quis risus id semper iaculis malesuada mattis.
-                            </div>
-                            <div>
-                              em erat vivamus rhoncus. Est eget at mattis.
-                            </div>
-                            <div>
-                              sem erat vivamus rhoncus. Est eget at quis
-                              risus id semper iaculis malesuada mattis.
-                            </div>
-                            <div>
-                              nam facilisi scelerisque mollis erat grivamus
-                              rhoncus. Est eget at quis r mattis.
-                            </div>
-                            <div>
-                              nam facilisi scelerisque mollis erat grivamus
-                              rhoncus. Est eget at quis r mattis.
-                            </div>
-                            <div>
-                              nam facilisi scelerisque mollis erat grivamus
-                              rhoncus. Est eget at quis r mattis.
-                            </div>
-                            <div>
-                              nam facilisi scelerisque mollis erat grivamus
-                              rhoncus. Est eget at quis r mattis.
-                            </div>
-                            <div>
-                              facilisi sncus. Est eget at quis risus id
-                              semper iaculis malesuada mattis.
-                            </div>
-                            <div>
-                              facilisi sncus. Est eget at quis risus id
-                              semper iaculis malesuada mattis.
-                            </div>
-                            <div>
-                              facilisi sncus. Est eget at quis risus id
-                              semper iaculis malesuada mattis.
-                            </div>
-                            <div>
-                              facilisi sncus. Est eget at quis risus id
-                              semper iaculis malesuada mattis.
-                            </div>
-                          </section>
-                        </div>
-                        <div class="tab-pane fade show active row g-2 capsules" id="profile-tab-pane1" role="tabpanel"
-                          aria-labelledby="home-tab" tabindex="1">
-                          <section>
-                            <div>
-                              rcu sed viverra sit hac sem sem erat vivamus
-                              rhoncus. Est eget at quis risus id semper
-                              iaculis malesuada mattis.
-                            </div>
-                            <div>
-                              Tortorvivamus rhoncus. Est eget at quis risus id
-                              semper iaculis malesuada mattis.
-                            </div>
-                            <div>
-                              Tortor convallisvivamus rhoncus. Est eget at
-                              quis risus id semper iaculis malesuada mattis.
-                            </div>
-                            <div>
-                              Tortor convallisvivamus rhoncus. Est eget at
-                              quis risus id semper iaculis malesuada mattis.
-                            </div>
-                          </section>
-                        </div>
-                      </div>
-                    </div>
+          <div style="
+              height:65vh;
+              overflow: auto;
+              overflow-x: hidden;
+              padding-bottom: 60px;
+          " class="tab-content pt-3 px-lg-4 px-sm-2" id="myTabContent1">
+              <div class="tab-pane fade show active row g-2 capsules" id="home-tab-pane2" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                 <section class="row g-2">
+                  <div>
+                    hac sem sem erat vivamus rhoncus. Est eget at
+                    quis risus id semper iaculis malesuada mattis.
                   </div>
+                  <div>
+                    em erat vivamus rhoncus. Est eget at mattis.
+                  </div>
+                  <div>
+                    sem erat vivamus rhoncus. Est eget at quis
+                    risus id semper iaculis malesuada mattis.
+                  </div>
+                  <div>
+                    nam facilisi scelerisque mollis erat grivamus
+                    rhoncus. Est eget at quis r mattis.
+                  </div>
+                  <div>
+                    nam facilisi scelerisque mollis erat grivamus
+                    rhoncus. Est eget at quis r mattis.
+                  </div>
+                  <div>
+                    nam facilisi scelerisque mollis erat grivamus
+                    rhoncus. Est eget at quis r mattis.
+                  </div>
+                  <div>
+                    nam facilisi scelerisque mollis erat grivamus
+                    rhoncus. Est eget at quis r mattis.
+                  </div>
+                  <div>
+                    facilisi sncus. Est eget at quis risus id
+                    semper iaculis malesuada mattis.
+                  </div>
+                </section>
+              </div>
+              <div class="tab-pane fade row g-2 capsules" id="profile-tab-pane1" role="tabpanel" aria-labelledby="profile-tab" tabindex="1">
+                <section class="row g-2">
                   
-                </div>
+                  <div>
+                    nam facilisi scelerisque mollis erat grivamus
+                    rhoncus. Est eget at quis r mattis.
+                  </div>
+                  <div>
+                    nam facilisi scelerisque mollis erat grivamus
+                    rhoncus. Est eget at quis r mattis.
+                  </div>
+                  <div>
+                    nam facilisi scelerisque mollis erat grivamus
+                    rhoncus. Est eget at quis r mattis.
+                  </div>
+                  <div>
+                    nam facilisi scelerisque mollis erat grivamus
+                    rhoncus. Est eget at quis r mattis.
+                  </div>
+                  <div>
+                    facilisi sncus. Est eget at quis risus id
+                    semper iaculis malesuada mattis.
+                  </div>
+                </section>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
 
               </div>
               
