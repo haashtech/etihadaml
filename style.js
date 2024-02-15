@@ -205,28 +205,28 @@ function back() {
 
 
 
-
 document.addEventListener('DOMContentLoaded', function() {
-    const button = document.getElementById('myButton');
-    const hideButtonTabs = document.querySelectorAll('.meeem'); // Adjust the selector based on your actual HTML structure
-    const hideButtonTab = document.querySelector('.btnremove');
+  const button = document.getElementById('myButton');
+  const hideButtonTabs = document.querySelectorAll('.meeem'); // Adjust the selector based on your actual HTML structure
+  const hideButtonTab = document.querySelector('.btnremove');
 
-    hideButtonTab.addEventListener('click', function() {
-        button.style.display = 'none';
-    });
-   
-
-    button.addEventListener('click', function() {
+  hideButtonTab.addEventListener('click', function() {
       button.style.display = 'none';
   });
 
-    hideButtonTabs.forEach(tab => {
-        tab.addEventListener('click', function() {
-            button.style.display = 'block';
-        });
-    });
-    hideButtonTab.forEach(tab => {
-      hideButtonTab.addEventListener('click', function() {
+  button.addEventListener('click', function() {
+      button.style.display = 'none';
+  });
+
+  hideButtonTabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+          button.style.display = 'block';
+      });
+  });
+
+  // Corrected the loop for hideButtonTab
+  hideButtonTab.forEach(tab => {
+      tab.addEventListener('click', function() {
           button.style.display = 'none';
       });
   });
@@ -462,26 +462,31 @@ var collapseList = collapseElementList.map(function (collapseEl) {
 // newCheck button start--
 
 function switchToTab(tabId) {
+  // Remove 'active' class from all tabs
   var tabs = document.querySelectorAll('.nav-link');
   tabs.forEach(function (tab) {
-      if (tab.getAttribute('data-bs-target') === '#' + tabId) {
-          tab.classList.add('active');
-          
-      } else {
-          tab.classList.remove('active');
-      }
+    tab.classList.remove('active');
   });
 
+  // Add 'active' class to the selected tab
+  var selectedTab = document.querySelector('[data-bs-target="#' + tabId + '"]');
+  if (selectedTab) {
+    selectedTab.classList.add('active');
+  }
+
+  // Remove 'show' and 'active' classes from all tab contents
   var tabContent = document.querySelectorAll('.tab-pane');
   tabContent.forEach(function (content) {
-      if (content.getAttribute('id') === tabId) {
-          content.classList.add('show', 'active');
-
-      } else {
-          content.classList.remove('show', 'active');
-      }
+    content.classList.remove('show', 'active');
   });
+
+  // Add 'show' and 'active' classes to the selected tab content
+  var selectedContent = document.getElementById(tabId);
+  if (selectedContent) {
+    selectedContent.classList.add('show', 'active');
+  }
 }
+
 
 
 
