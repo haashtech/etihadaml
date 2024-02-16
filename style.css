@@ -1,7 +1,7 @@
 :root {
     --orange: #FF5428;
     --blue: #1D53B4;
-    /* --black: #383838; */
+   
     --black: #212121;
     --white: #FFFFFF;
     --gray:#efefef;
@@ -28,7 +28,7 @@ padding: 0;
     background-color: var(--black);
 }
 
- /* Override Bootstrap styles for the range input */
+
  body input[type="range"][data-rangeSlider] {
   background-color: #e0e0e0;
 }
@@ -43,10 +43,14 @@ body input[type="range"][data-rangeSlider]::-moz-range-thumb {
 
 
 
+.svgResult svg{
+  height: 10px;
+  width: auto;
+  padding: 0;
+}
 
-/* pie chart start*/
 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url(https:);
 
 @keyframes bake-pie {
   from {
@@ -54,7 +58,7 @@ body input[type="range"][data-rangeSlider]::-moz-range-thumb {
   }
 }
 .form-check.form-switch input[type="checkbox"] {
-  border-radius: 0.25rem;  /* Adjust the value as needed */
+  border-radius: 0.25rem; 
 }
 
 main {
@@ -109,10 +113,10 @@ section {
   padding: 0;
   margin: 0;
   width: fit-content;
-  /* background: #fff; */
+ 
   padding: 15px;
   font-size: 13px;
-  /* box-shadow: 1px 1px 0 #ddd, 2px 2px 0 #bbb; */
+ 
 }
 .legend li {
   width: auto;
@@ -140,7 +144,7 @@ footer {
 
 
 
-/* pie chart end*/
+
 
 
 
@@ -149,22 +153,21 @@ footer {
     border-radius: 10px;
     background-color: var(--capsule);
     text-align: justify;
-    padding: 20px;
 }
 
 
 
 
 
-  /* Style the scrollbar handle */
+ 
   ::-webkit-scrollbar-thumb {
-    background-color: var(--text); /* Set the color of the scrollbar handle */
-    border-radius: 5px; /* Set the border radius of the scrollbar handle */
+    background-color: var(--text);
+    border-radius: 5px;
   }
   
-  /* Style the scrollbar track on hover */
+ 
   ::-webkit-scrollbar-track:hover {
-    background-color: var(--capsule); /* Set the color of the scrollbar track on hover */
+    background-color: var(--capsule);
   }
 
 
@@ -345,7 +348,7 @@ footer {
  
 
 .completed {
-  color: green; /* Change the color to your desired color */
+  color: green;
 }
 
 .form-group.row label{
@@ -384,7 +387,7 @@ footer {
   margin: 50px auto;
 }
 
-/* Bootstrap 5 text input with search icon */
+
 
 .has-search .form-control {
   padding-left: 2.375rem;
@@ -417,9 +420,9 @@ footer {
 
 
 
-/* Add drop shadow to an element with class "example" */
+
 .has-search input{
-  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1); /* horizontal offset, vertical offset, blur radius, color */
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -468,7 +471,7 @@ table, th, td {
   border: none;
 }
 table{
-  border-spacing: 0 10px; /* Adjust the second value to set the desired space between rows */
+  border-spacing: 0 10px;
    margin-bottom: 20px;
    border-collapse: separate;
 }
@@ -502,7 +505,7 @@ tr{
 
 
 
-/* nested */
+
 
 
 
@@ -531,11 +534,11 @@ tr{
   border-radius: 16px;
 }
 
-.logout{
+/* .logout{
   position: absolute;
   bottom: 6vh;
   left: 3vh;
-}
+} */
 .logout a{
   text-decoration: none;
   font-weight: 600;
@@ -543,26 +546,31 @@ tr{
 }
 
 
-/* ----------------------------MEDIA QUERY start----------------------------- */
 
 
-/* Default styles for all devices */
 
-/* Styles for devices with a maximum width of 767px (phones) */
+
 @media (max-width: 767px) {
-  /* CSS rules for phones */
+  .backhomeheader{
+    display: none;
+  }
+ .welcome{
+  padding-top: 30px;
+ }
+ .welcome h1{
+  padding-bottom: 20px;
+ }
   .card-footer{
     position:sticky;
     width: 100%;
     bottom: 0;
   }
-  .textGreetings{
-    font-size: 14px;
-
+ 
+  .form-text{
+    font-size: 12px;
   }
   #myButton{
-    right: 5vw;
-    top: 115px;
+    
     font-size: 13px;
   }
   #v-pills-messages{
@@ -692,7 +700,7 @@ tr{
     font-size: 12px;
    }
    #gender :nth-child(1n) {
-    /* Your styles here */
+   
     font-size: 12px;
   }
   .svgResult svg{
@@ -702,7 +710,7 @@ tr{
   }
   
   .accordion-button div:nth-child(1) {
-    /* Your styles here */
+   
     padding-right: 20px;
   }
   .sidebarmain{
@@ -741,17 +749,17 @@ tr{
    #v-pills-profile{
     font-size: 14px;
    }
+  
 }
 
-/* Styles for devices with a minimum width of 768px and a maximum width of 991px (tablets) */
+
 @media (min-width: 768px) and (max-width: 991px) {
-  /* CSS rules for tablets */
+ 
   .sidebarmain{
     display: none;
   }
   #myButton{
-    right: 1vw;
-    top: 110px;
+  
     font-size: 14px;
   }
   .nav.nav-pills.nav-fill{
@@ -770,18 +778,21 @@ tr{
     min-width: 100px;
     font-size: 12px;
   }
+  .backhomeheader{
+    display: none;
+  }
+  .welcome h1{
+    padding-bottom: 20px;
+   }
 }
 
-/* Styles for devices with a minimum width of 992px and a maximum width of 1199px (small desktops) */
+
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* CSS rules for small desktops */
+ 
   .sidebarmain{
     display: block;
   }
-  #myButton{
-    right: 5vw;
-    top: 100px;
-  }
+ 
   .nav.nav-pills.nav-fill{
     font-size: 15px;
   }
@@ -791,11 +802,11 @@ tr{
     padding: 0;
   }
   .accordion-button div:nth-child(1) {
-    /* Your styles here */
+   
     padding-right: 20px;
   }
   .accordion-button div:nth-child(2) {
-    /* Your styles here */
+   
     padding-right: 20px;
   }
   .main_container{
@@ -818,11 +829,14 @@ tr{
     min-width: 100px;
     font-size: 14px;
   }
+  .welcome h1{
+    padding-bottom: 20px;
+   }
 }
 
-/* Styles for devices with a minimum width of 1200px (large desktops) */
+
 @media (min-width: 1200px) {
-  /* CSS rules for large desktops */
+ 
   
   .sidebarmain{
     display: block;
@@ -832,13 +846,7 @@ tr{
     width: 200px;
     position: relative;
   }
-  .textGreetings{
-    font-size: 18px;
-  }
-  #myButton{
-    right: 3vw;
-    top: 100px;
-  }
+
   #v-pills-messages{
     padding: 40px ;
   }
@@ -896,13 +904,16 @@ tr{
       padding: 0;
     }
     .accordion-button div:nth-child(1) {
-      /* Your styles here */
+     
       padding-right: 50px;
     }
     .accordion-button div:nth-child(2) {
-      /* Your styles here */
+     
       padding-right: 50px;
     }
+    .welcome h1{
+      padding-bottom: 20px;
+     }
 }
 
 

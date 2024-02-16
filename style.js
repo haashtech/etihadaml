@@ -47,7 +47,7 @@ function sliceSize(dataNum, dataTotal) {
   createPie(".pieID.legend", ".pieID.pie");
   
 
-// Dropdown
+
 
 $("ul.nav li.dropdown").hover(
   function () {
@@ -58,21 +58,21 @@ $("ul.nav li.dropdown").hover(
   }
 );
 
-// document.addEventListener('DOMContentLoaded', function () {
-//   var dashboardBtn = document.getElementById('dashboardBtn');
-
-//   dashboardBtn.addEventListener('click', function() {
-//     // Toggle 'clicked' class to change text color and background color
-//     dashboardBtn.style.color='black';
-//     dashboardBtn.style.background='white';
-//     dashboardBtn.classList.toggle('clicked');
-//   });
-// });
 
 
 
 
-// step_wizard_start
+
+
+
+
+
+
+
+
+
+
+
 var current = 0;
     var tabs = $(".tab");
     var tabsPill = $(".tab-pills");
@@ -106,13 +106,13 @@ function loadFormData(n) {
 
   $(tabsPill[n]).addClass("active").addClass("completed");
   $(tabs[n]).removeClass("d-none");
-  // $("#back_button").attr("disabled", n === 0 ? true : false);
+  
 
   if (n+2 === tabs.length) {
-    // Change text to "SEND REQUEST" without changing the background color
+    
     nextButton.text("SEND REQUEST").css("background-color", "var(--submit)")
-    // Remove hover effect when it's the final step
-    // nextButton.off('mouseenter mouseleave').css("background-color", "var(--submit)");
+    
+    
   }else if(tabs.length===n+1){
     nextButton.css("display", "none")
     backButton.css("display", "none")
@@ -120,19 +120,19 @@ function loadFormData(n) {
 
   }
   else {
-    // Reset the text to "CONTINUE" and keep the background color
-    nextButton.text("CONTINUE").css("background-color", "var(--orange)").attr("type", "button").attr("onclick", "next()");
-    // nextButton.css("display", "inline")
     
-    // Add hover effect
+    nextButton.text("CONTINUE").css("background-color", "var(--orange)").attr("type", "button").attr("onclick", "next()");
+    
+    
+    
     if(nextButton.text=="CONTINUE"){
       nextButton.hover(
         function () {
-          // Mouseenter (hover in) - Change background color on hover
+          
           $(this).css("background-color", "#ee4801");
         },
         function () {
-          // Mouseleave (hover out) - Change background color back to original
+          
           $(this).css("background-color", "var(--orange)");
         }
       );
@@ -140,7 +140,7 @@ function loadFormData(n) {
   }
 }
 
-// Assuming you call the function at some point
+
 loadFormData(current);
 
 function next() {
@@ -150,7 +150,7 @@ function next() {
     var individualCheckbox = $("#flexCheckDefault");
     var corporateCheckbox = $("#flexCheckChecked");
 
-    // Check which checkbox is selected
+    
     if (individualCheckbox.prop("checked")) {
       $("#individualContent").removeClass("d-none");
       $("#corporateContent").addClass("d-none");
@@ -171,9 +171,9 @@ function next() {
       $("#individualContent3").addClass("d-none");
    
     
-    // Move to the next tab
-    // current++;
-    // loadFormData(current);
+    
+    
+    
   }
   current++;
   loadFormData(current);
@@ -184,30 +184,30 @@ function back() {
     $(tabs[current]).addClass("d-none");
     $(tabsPill[current]).removeClass("active");
 
-    // Remove completed class from the current tab
+    
     $(tabsPill[current]).removeClass("completed");
 
     current--;
 
-    // Add completed class to the previous tab
+    
     $(tabsPill[current]).addClass("completed");
 
     loadFormData(current);
   }
 
-  // Disable the back button if the current tab is 0
-  // $("#back_button").attr("disabled", current === 0);
+  
+  
 }
 
 
-// end
+
 
 
 
 
 document.addEventListener('DOMContentLoaded', function() {
   const button = document.getElementById('myButton');
-  const hideButtonTabs = document.querySelectorAll('.meeem'); // Adjust the selector based on your actual HTML structure
+  const hideButtonTabs = document.querySelectorAll('.meeem'); 
   const hideButtonTab = document.querySelector('.btnremove');
 
   hideButtonTab.addEventListener('click', function() {
@@ -224,7 +224,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   });
 
-  // Corrected the loop for hideButtonTab
+  
   hideButtonTab.forEach(tab => {
       tab.addEventListener('click', function() {
           button.style.display = 'none';
@@ -236,7 +236,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-  // individual_corporate check
+  
 
   document.addEventListener('DOMContentLoaded', function() {
     const checkboxes = document.querySelectorAll('.form-check-input4');
@@ -244,14 +244,14 @@ document.addEventListener('DOMContentLoaded', function() {
     checkboxes.forEach(checkbox => {
         checkbox.addEventListener('change', function() {
             if (this.checked) {
-                // Uncheck other checkboxes
+                
                 checkboxes.forEach(otherCheckbox => {
                     if (otherCheckbox !== this) {
                         otherCheckbox.checked = false;
                     }
                 });
             } else {
-                // Prevent unchecking if no other checkbox is checked
+                
                 const atLeastOneChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
                 if (!atLeastOneChecked) {
                     this.checked = true;
@@ -262,7 +262,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-// ranger start
+
 
 
 
@@ -286,7 +286,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   var rangesliderElement = document.querySelector('input[type="range"]');
-  rangesliderElement.rangeslider({
+   rangesliderElement.rangeslider({
     polyfill: false,
     onInit: function() {
       valueOutput(rangesliderElement);
@@ -371,7 +371,7 @@ $(document).ready(function () {
 
 
 document.getElementById('myButton').addEventListener('click', function() {
-  // Trigger a click event on the button to open the associated tab
+  
   document.getElementById('myButton').click();
   
 });
@@ -379,24 +379,24 @@ document.getElementById('myButton').addEventListener('click', function() {
 
 
 function filterTable(filterValue) {
-  // Add your filter logic here
+  
   var table, tr, td, i, txtValue;
   table = document.getElementById("myTable");
   tr = table.getElementsByTagName("tr");
 
-  var matchesFound = false; // Flag to check if any matches are found
+  var matchesFound = false; 
 
   for (i = 0; i < tr.length; i++) {
-      var found = false; // Flag to check if the filter value is found in any column
+      var found = false; 
       for (var j = 0; j < tr[i].cells.length; j++) {
           td = tr[i].cells[j];
           if (td) {
               txtValue = td.textContent || td.innerText;
-              // Check if the filter value matches the text content
+              
               if (filterValue === 'All' || txtValue.toUpperCase().indexOf(filterValue.toUpperCase()) > -1) {
                   found = true;
                   matchesFound = true;
-                  break; // Stop checking other cells in the row if a match is found
+                  break; 
               }
           }
       }
@@ -407,7 +407,7 @@ function filterTable(filterValue) {
       }
   }
 
-  // Display a message when no matches are found or the filter is empty
+  
   var emptyMessage = document.getElementById("emptyMessage");
   if (!matchesFound || filterValue.trim() === '') {
       emptyMessage.style.display = "block";
@@ -427,7 +427,7 @@ searchInput.addEventListener('input', function() {
   tr = table.getElementsByTagName("tr");
 
   for (i = 0; i < tr.length; i++) {
-      td = tr[i].getElementsByTagName("td")[1]; // Change the index to match the column you want to search
+      td = tr[i].getElementsByTagName("td")[1]; 
       if (td) {
           txtValue = td.textContent || td.innerText;
           if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -442,7 +442,7 @@ searchInput.addEventListener('input', function() {
 
 
 
-// collapse start 
+
 
 
 
@@ -459,28 +459,28 @@ var collapseList = collapseElementList.map(function (collapseEl) {
 
 
 
-// newCheck button start--
+
 
 function switchToTab(tabId) {
-  // Remove 'active' class from all tabs
-  var tabs = document.querySelectorAll('.nav-link');
-  tabs.forEach(function (tab) {
-    tab.classList.remove('active');
-  });
+  
+  var previousTab = document.querySelector('.nav-link.active');
+  if (previousTab) {
+    previousTab.classList.remove('active');
+  }
 
-  // Add 'active' class to the selected tab
+  
   var selectedTab = document.querySelector('[data-bs-target="#' + tabId + '"]');
   if (selectedTab) {
     selectedTab.classList.add('active');
   }
 
-  // Remove 'show' and 'active' classes from all tab contents
+  
   var tabContent = document.querySelectorAll('.tab-pane');
   tabContent.forEach(function (content) {
     content.classList.remove('show', 'active');
   });
 
-  // Add 'show' and 'active' classes to the selected tab content
+  
   var selectedContent = document.getElementById(tabId);
   if (selectedContent) {
     selectedContent.classList.add('show', 'active');
@@ -492,11 +492,11 @@ function switchToTab(tabId) {
 
 
 document.getElementById('back_button').addEventListener('click', function() {
-  // Reload the page
+  
   window.location.reload();
 });
 document.getElementById('logout').addEventListener('click', function() {
-  // Reload the page
+  
   window.location.reload();
 });
 

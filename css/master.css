@@ -514,16 +514,6 @@ ul.theme-mega-menu li.mega-menu {
   color: #fca311;
   margin-left: 5px;
 }
-.loginbtn_mobile{
-  background-color: #264de8;
-  margin: 20px 0;
-  border-radius: 5px;
-  padding: 10px 20px;
-  border: none;
-}
-.loginbtn_mobile a{
-  color: white;
-}
 
 .cta-btn.d-none.d-lg-block.btn-after.button.action-btn.home1-header-btn a svg {
   margin-right: 4px;

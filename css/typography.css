@@ -14,7 +14,7 @@ Location:
   padding:0;
   box-sizing: border-box;
 }
-input, textarea, select, option{
+input, textarea, select, option,{
   max-width: 100%;
 }
 
@@ -60,8 +60,11 @@ body{
   font-family: 'Nunito', sans-serif;
   font-family: 'Outfit', sans-serif;
   overflow-x: hidden;
-  background-color: #f6f7ff;
+}
+input::placeholder{
 
+}
+textarea::placeholder{
 
 }
 
@@ -128,7 +131,7 @@ body{
   color: #676A72;
 }
 .color-16{
-  color: #E9EDF4;
+  color: #E9EDF4;;
 }
 .color-16{
   color: #F6F7FA;
@@ -282,7 +285,7 @@ body{
   font-size: 15px;
 }
 .font-16{
-  font-size: 20px;
+  font-size: 16px;
 }
 .font-18{
   font-size: 18px;
@@ -707,7 +710,6 @@ body{
 }
 .section-padding4{
   padding: 60px 0 60px;
-  margin-top: 100px;
 }
 .section-padding11{
   padding: 100px 0 0;
@@ -803,9 +805,7 @@ body{
 
 
 /* scetion-padding */
-.section{
-  background-color: #f3f4ff;
-}
+
 
 @media screen and (min-width: 768px) {
   @keyframes animation-1 {
@@ -951,13 +951,3 @@ body{
   background: #F6F6F6;
 }
 
-
-
-@media (max-width: 767px) {
-  .section-padding4{
-    padding-top: 0;
-  }
-  .font-16{
-    font-size: 14px;
-  }
-}
